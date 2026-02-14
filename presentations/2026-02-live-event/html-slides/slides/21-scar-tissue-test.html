@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Slide 21: The Scar Tissue Test</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/brand.css">
+  <style>
+    body { background: #f5fafd; }
+    .slide-bg { position: absolute; top: 0; left: 0; width: 1920px; height: 1080px; z-index: 0; pointer-events: none; }
+
+    .layout {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px;
+      display: grid; grid-template-columns: 1fr 1fr;
+      z-index: 5; padding: 80px 100px; gap: 80px; align-items: center;
+    }
+
+    .text-side { display: flex; flex-direction: column; justify-content: center; }
+    .slide-heading { font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 700; color: var(--dark-gray); line-height: 1.15; margin: 0 0 32px 0; }
+    .lead-text { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 400; color: #605e5c; line-height: 1.5; margin: 0 0 40px 0; }
+
+    .question-box {
+      background: white;
+      border-radius: 14px;
+      padding: 36px 40px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+      border-left: 4px solid var(--brand-blue);
+    }
+
+    .question-label { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600; color: #8a8886; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .question-text { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--dark-gray); line-height: 1.3; margin: 0 0 16px 0; }
+    .question-sub { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 400; color: #8a8886; line-height: 1.4; }
+
+    .illust-side { display: flex; align-items: center; justify-content: center; }
+    .illust-side img { width: 100%; max-width: 600px; height: auto; }
+    .e-badge { position: absolute; bottom: 40px; right: 40px; width: 48px; height: auto; opacity: 0.08; z-index: 10; }
+  </style>
+</head>
+<body>
+  <img src="../../../../assets/From-Figma/light-background-with-shapes.svg" alt="" class="slide-bg">
+  <div class="layout">
+    <div class="text-side">
+      <h2 class="slide-heading">The Scar Tissue Test</h2>
+      <p class="lead-text">How do you know where institutional knowledge lives? Find your scar tissue.</p>
+      <div class="question-box">
+        <div class="question-label">Ask your team</div>
+        <p class="question-text">"What mistake did we make that we'll never make again?"</p>
+        <p class="question-sub">That answer is encoded institutional judgment — your most valuable patterns to preserve</p>
+      </div>
+    </div>
+    <div class="illust-side">
+      <img src="../../../../assets/illustrations/concepts/undraw_interview_re_e5jn.png" alt="Interview illustration">
+    </div>
+  </div>
+  <img src="../../../../assets/From-Figma/eSided-e-only-of-logo.svg" alt="" class="e-badge">
+  <script src="../shared/slide-toolbar.js"></script>
+</body>
+</html>

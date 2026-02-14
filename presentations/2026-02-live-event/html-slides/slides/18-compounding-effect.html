@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Slide 18: The Compounding Effect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/brand.css">
+  <style>
+    body { background: #f5fafd; }
+    .slide-bg { position: absolute; top: 0; left: 0; width: 1920px; height: 1080px; z-index: 0; pointer-events: none; }
+
+    .layout {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px; z-index: 5;
+      display: flex; flex-direction: column;
+      justify-content: center; padding: 0 140px;
+    }
+
+    .act-label { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; color: var(--brand-blue); margin-bottom: 16px; }
+    .slide-heading { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700; color: var(--dark-gray); line-height: 1.15; margin: 0 0 52px 0; }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+      margin-bottom: 48px;
+    }
+
+    .period {
+      background: white;
+      border-radius: 14px;
+      padding: 36px 32px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+      border-top: 4px solid #e1dfdd;
+    }
+
+    .period:last-child { border-top-color: var(--brand-blue); }
+
+    .period-label { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600; color: #8a8886; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+    .period-stat { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 700; color: var(--dark-gray); line-height: 1; margin-bottom: 8px; }
+    .period:last-child .period-stat { color: var(--brand-blue); }
+    .period-detail { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 400; color: #605e5c; margin-bottom: 4px; }
+
+    /* Visual trend bar */
+    .trend-bar {
+      display: flex;
+      align-items: end;
+      gap: 4px;
+      margin-top: 20px;
+      height: 48px;
+    }
+
+    .bar { background: var(--brand-blue); border-radius: 3px 3px 0 0; width: 100%; opacity: 0.15; }
+    .period:nth-child(1) .bar:nth-child(1) { height: 30%; opacity: 0.3; }
+    .period:nth-child(1) .bar:nth-child(2) { height: 40%; opacity: 0.25; }
+    .period:nth-child(1) .bar:nth-child(3) { height: 50%; opacity: 0.2; }
+
+    .period:nth-child(2) .bar:nth-child(1) { height: 45%; opacity: 0.3; }
+    .period:nth-child(2) .bar:nth-child(2) { height: 60%; opacity: 0.35; }
+    .period:nth-child(2) .bar:nth-child(3) { height: 75%; opacity: 0.4; }
+
+    .period:nth-child(3) .bar:nth-child(1) { height: 60%; opacity: 0.4; }
+    .period:nth-child(3) .bar:nth-child(2) { height: 80%; opacity: 0.6; }
+    .period:nth-child(3) .bar:nth-child(3) { height: 100%; opacity: 0.8; }
+
+    .bottom-note { font-family: 'Inter', sans-serif; font-size: 24px; color: #8a8886; border-left: 4px solid var(--brand-blue); padding-left: 20px; }
+
+    .e-badge { position: absolute; bottom: 40px; right: 40px; width: 48px; height: auto; opacity: 0.08; z-index: 10; }
+  </style>
+</head>
+<body>
+  <img src="../../../../assets/From-Figma/light-background-with-shapes.svg" alt="" class="slide-bg">
+  <div class="layout">
+    <div class="act-label">Proof &mdash; Meridian Group</div>
+    <h2 class="slide-heading">The Compounding Effect</h2>
+
+    <div class="timeline">
+      <div class="period">
+        <div class="period-label">Month 1</div>
+        <div class="period-stat">50</div>
+        <div class="period-detail">encoded patterns</div>
+        <div class="period-detail">$15K value/month</div>
+        <div class="trend-bar"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+      </div>
+      <div class="period">
+        <div class="period-label">Month 6</div>
+        <div class="period-stat">150</div>
+        <div class="period-detail">encoded patterns</div>
+        <div class="period-detail">$28K value/month</div>
+        <div class="trend-bar"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+      </div>
+      <div class="period">
+        <div class="period-label">Month 12</div>
+        <div class="period-stat">221</div>
+        <div class="period-detail">encoded patterns</div>
+        <div class="period-detail">$40K value/month</div>
+        <div class="trend-bar"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+      </div>
+    </div>
+
+    <p class="bottom-note">Each pattern teaches the AI workers institutional judgment — this improves over time, unlike human hires</p>
+  </div>
+
+  <img src="../../../../assets/From-Figma/eSided-e-only-of-logo.svg" alt="" class="e-badge">
+  <script src="../shared/slide-toolbar.js"></script>
+</body>
+</html>

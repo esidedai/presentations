@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Slide 10: Workers vs. Tools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/brand.css">
+  <style>
+    body { background: #f5fafd; }
+
+    .slide-bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1920px; height: 1080px;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .layout {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1920px; height: 1080px;
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 140px;
+    }
+
+    .slide-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--dark-gray);
+      line-height: 1.15;
+      margin: 0 0 52px 0;
+      text-align: center;
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+
+    .col {
+      border-radius: 16px;
+      padding: 44px 48px;
+    }
+
+    .col-tools {
+      background: #f5f5f5;
+    }
+
+    .col-workers {
+      background: white;
+      box-shadow: 0 2px 16px rgba(0,120,212,0.08);
+      border: 2px solid rgba(0,120,212,0.12);
+    }
+
+    .col-header {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 36px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #e1dfdd;
+    }
+
+    .col-tools .col-header { color: #8a8886; }
+    .col-workers .col-header { color: var(--brand-blue); }
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 28px;
+    }
+
+    .row:last-child { margin-bottom: 0; }
+
+    .row-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #b0b0b0;
+    }
+
+    .row-value {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .col-tools .row-value { color: #605e5c; }
+    .col-workers .row-value { color: var(--dark-gray); font-weight: 500; }
+
+    .e-badge {
+      position: absolute;
+      bottom: 40px; right: 40px;
+      width: 48px; height: auto;
+      opacity: 0.08;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <img src="../../../../assets/From-Figma/light-background-with-shapes.svg" alt="" class="slide-bg">
+
+  <div class="layout">
+    <h2 class="slide-heading">Workers vs. Tools</h2>
+
+    <div class="columns">
+      <div class="col col-tools">
+        <div class="col-header">Tools (ChatGPT)</div>
+        <div class="row">
+          <div class="row-label">Initiation</div>
+          <div class="row-value">You start every task</div>
+        </div>
+        <div class="row">
+          <div class="row-label">Memory</div>
+          <div class="row-value">None — stateless</div>
+        </div>
+        <div class="row">
+          <div class="row-label">Judgment</div>
+          <div class="row-value">You provide context every time</div>
+        </div>
+        <div class="row">
+          <div class="row-label">Output</div>
+          <div class="row-value">Suggestions</div>
+        </div>
+      </div>
+
+      <div class="col col-workers">
+        <div class="col-header">Workers (AI Workforce)</div>
+        <div class="row">
+          <div class="row-label">Initiation</div>
+          <div class="row-value">Runs autonomously on triggers</div>
+        </div>
+        <div class="row">
+          <div class="row-label">Memory</div>
+          <div class="row-value">Remembers patterns and history</div>
+        </div>
+        <div class="row">
+          <div class="row-label">Judgment</div>
+          <div class="row-value">Learns your institutional knowledge</div>
+        </div>
+        <div class="row">
+          <div class="row-label">Output</div>
+          <div class="row-value">Completed work product</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <img src="../../../../assets/From-Figma/eSided-e-only-of-logo.svg" alt="" class="e-badge">
+  <script src="../shared/slide-toolbar.js"></script>
+</body>
+</html>

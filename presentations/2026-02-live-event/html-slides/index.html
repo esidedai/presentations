@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deck Validator — The AI Workforce</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #fafafa;
+      color: #323130;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 48px 24px 32px;
+    }
+
+    header h1 {
+      font-size: 22px;
+      font-weight: 600;
+      color: #323130;
+    }
+
+    header p {
+      font-size: 14px;
+      color: #8a8886;
+      margin-top: 6px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 0 48px 64px;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      transition: box-shadow 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+
+    .card.pending { opacity: 0.45; cursor: default; }
+    .card.pending:hover { box-shadow: 0 1px 4px rgba(0,0,0,0.06); transform: none; }
+
+    .thumbnail-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      background: #f0f0f0;
+    }
+
+    .thumbnail-wrap iframe {
+      width: 1920px;
+      height: 1080px;
+      transform-origin: top left;
+      transform: scale(0.25);
+      border: none;
+      pointer-events: none;
+    }
+
+    .placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f5f5f5;
+      font-size: 13px;
+      color: #bbb;
+      font-weight: 500;
+    }
+
+    .card-info {
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .slide-num {
+      background: #0078d4;
+      color: white;
+      min-width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .card.pending .slide-num { background: #d0d0d0; }
+
+    .card-title {
+      font-size: 13px;
+      font-weight: 500;
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .badge {
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    .badge.ready { background: #e6f4ea; color: #1e7e34; }
+    .badge.pending { background: #f0f0f0; color: #bbb; }
+    .badge.placeholder { background: #fff3e0; color: #e65100; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The AI Workforce &mdash; Slide Deck</h1>
+    <p id="stats">28 slides &middot; 1920&times;1080</p>
+  </header>
+  <div class="grid" id="grid"></div>
+
+  <script>
+    const slides = [
+      { num: 1,  slug: '01-title',                title: 'Title',                      type: 'Title',       status: 'ready' },
+      { num: 2,  slug: '02-harvest-1800s',         title: 'The Harvest (1800s)',        type: 'Photo+Text',  status: 'placeholder' },
+      { num: 3,  slug: '03-combine-harvester',     title: 'The Combine Harvester',      type: 'Photo+Text',  status: 'placeholder' },
+      { num: 4,  slug: '04-switchboard-operators', title: 'Switchboard Operators',      type: 'Photo+Text',  status: 'placeholder' },
+      { num: 5,  slug: '05-direct-dial',           title: 'Direct Dial',                type: 'Photo+Text',  status: 'placeholder' },
+      { num: 6,  slug: '06-todays-reality',        title: "Today's Reality",            type: 'Illust+Text', status: 'ready' },
+      { num: 7,  slug: '07-million-dollar-bottleneck', title: 'Million-Dollar Bottleneck', type: 'Chart',   status: 'ready' },
+      { num: 8,  slug: '08-tool-trap',             title: 'The Tool Trap',              type: 'Illust+Text', status: 'ready' },
+      { num: 9,  slug: '09-what-if-reframe',       title: 'What If We Reframe?',        type: 'Illust+Text', status: 'ready' },
+      { num: 10, slug: '10-workers-vs-tools',      title: 'Workers vs. Tools',          type: 'Table',       status: 'ready' },
+      { num: 11, slug: '11-meet-meridian',         title: 'Meet Meridian Group',        type: 'Illust+Text', status: 'ready' },
+      { num: 12, slug: '12-five-ai-workers',       title: '5 AI Workers',               type: 'List',        status: 'ready' },
+      { num: 13, slug: '13-the-numbers',           title: 'The Numbers',                type: 'Chart',       status: 'ready' },
+      { num: 14, slug: '14-invoice-processor',     title: 'Invoice Processor',          type: 'Diagram',     status: 'ready' },
+      { num: 15, slug: '15-what-really-changed',   title: 'What Really Changed',        type: 'Illust+Text', status: 'ready' },
+      { num: 16, slug: '16-three-autonomy-modes',  title: 'Three Autonomy Modes',       type: 'Diagram',     status: 'ready' },
+      { num: 17, slug: '17-what-happened-humans',  title: 'What Happened to Humans?',   type: 'Illust+Text', status: 'ready' },
+      { num: 18, slug: '18-compounding-effect',    title: 'The Compounding Effect',     type: 'Chart',       status: 'ready' },
+      { num: 19, slug: '19-real-asset',            title: 'The Real Asset',             type: 'Illust+Text', status: 'ready' },
+      { num: 20, slug: '20-capital-lens',          title: 'Capital Lens Framework',     type: 'Diagram',     status: 'ready' },
+      { num: 21, slug: '21-scar-tissue-test',      title: 'The Scar Tissue Test',       type: 'Illust+Text', status: 'ready' },
+      { num: 22, slug: '22-meridian-examples',     title: 'Meridian Examples',          type: 'Text',        status: 'ready' },
+      { num: 23, slug: '23-ai-changing-fast',      title: 'AI Is Changing Fast...',      type: 'Illust+Text', status: 'ready' },
+      { num: 24, slug: '24-asset-isnt-model',      title: "The Asset Isn't the Model",  type: 'Illust+Text', status: 'ready' },
+      { num: 25, slug: '25-like-hiring',           title: 'Like Hiring',                type: 'Illust+Text', status: 'ready' },
+      { num: 26, slug: '26-two-paths',             title: 'Two Paths Forward',          type: 'Diagram',     status: 'ready' },
+      { num: 27, slug: '27-getting-started',       title: 'Getting Started',            type: 'Illust+Text', status: 'ready' },
+      { num: 28, slug: '28-closing-question',      title: 'The Question',               type: 'Title',       status: 'ready' },
+    ];
+
+    const grid = document.getElementById('grid');
+    let readyCount = 0, pendingCount = 0;
+
+    slides.forEach(s => {
+      const isReady = s.status === 'ready' || s.status === 'placeholder';
+      if (isReady) readyCount++; else pendingCount++;
+
+      const card = document.createElement('div');
+      card.className = `card ${s.status === 'pending' ? 'pending' : ''}`;
+      if (isReady) card.onclick = () => location.href = `slides/${s.slug}.html`;
+
+      card.innerHTML = `
+        <div class="thumbnail-wrap">
+          ${isReady
+            ? `<iframe src="slides/${s.slug}.html" loading="lazy"></iframe>`
+            : `<div class="placeholder">${s.type} &mdash; pending</div>`
+          }
+        </div>
+        <div class="card-info">
+          <div class="slide-num">${s.num}</div>
+          <div class="card-title">${s.title}</div>
+          <span class="badge ${s.status}">${s.status}</span>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+
+    document.getElementById('stats').textContent =
+      `${readyCount} of ${slides.length} ready \u00b7 1920\u00d71080`;
+  </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Slide 16: Three Autonomy Modes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/brand.css">
+  <style>
+    body { background: #f5fafd; }
+
+    .slide-bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1920px; height: 1080px;
+      z-index: 0; pointer-events: none;
+    }
+
+    .layout {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1920px; height: 1080px;
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 140px;
+    }
+
+    .slide-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--dark-gray);
+      line-height: 1.15;
+      margin: 0 0 52px 0;
+    }
+
+    .modes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+    }
+
+    .mode {
+      background: white;
+      border-radius: 14px;
+      padding: 40px 36px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      border-top: 4px solid #e1dfdd;
+    }
+
+    .mode:nth-child(1) { border-top-color: var(--success-green); }
+    .mode:nth-child(2) { border-top-color: var(--brand-blue); }
+    .mode:nth-child(3) { border-top-color: var(--dark-gray); }
+
+    .mode-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--dark-gray);
+    }
+
+    .mode:nth-child(1) .mode-name { color: var(--success-green); }
+    .mode:nth-child(2) .mode-name { color: var(--brand-blue); }
+
+    .mode-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: #605e5c;
+      line-height: 1.5;
+    }
+
+    .mode-example {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: #8a8886;
+      line-height: 1.4;
+      padding-top: 12px;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .bottom-note {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      color: #8a8886;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .e-badge {
+      position: absolute;
+      bottom: 40px; right: 40px;
+      width: 48px; height: auto;
+      opacity: 0.08; z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <img src="../../../../assets/From-Figma/light-background-with-shapes.svg" alt="" class="slide-bg">
+
+  <div class="layout">
+    <h2 class="slide-heading">Three Autonomy Modes</h2>
+
+    <div class="modes">
+      <div class="mode">
+        <div class="mode-name">Autonomous</div>
+        <div class="mode-desc">Completes task, logs action</div>
+        <div class="mode-example">Invoice coding — processes and posts without human touch</div>
+      </div>
+      <div class="mode">
+        <div class="mode-name">Supervised</div>
+        <div class="mode-desc">Completes task, asks human to approve</div>
+        <div class="mode-example">Client outreach — drafts and queues, human clicks send</div>
+      </div>
+      <div class="mode">
+        <div class="mode-name">Human-Led</div>
+        <div class="mode-desc">Drafts work, human edits and sends</div>
+        <div class="mode-example">Blog posts — creates first draft, human refines voice</div>
+      </div>
+    </div>
+
+    <p class="bottom-note">You calibrate the autonomy level based on risk tolerance</p>
+  </div>
+
+  <img src="../../../../assets/From-Figma/eSided-e-only-of-logo.svg" alt="" class="e-badge">
+  <script src="../shared/slide-toolbar.js"></script>
+</body>
+</html>

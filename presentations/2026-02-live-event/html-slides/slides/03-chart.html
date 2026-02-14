@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Slide 3: The Numbers</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Brand Styles -->
+  <link rel="stylesheet" href="../styles/brand.css">
+
+  <style>
+    .content {
+      padding-top: 180px;
+    }
+
+    .chart-wrapper {
+      max-width: 1400px;
+      margin: 60px auto 0;
+    }
+
+    .chart-container {
+      background: white;
+      border-radius: 16px;
+      padding: 50px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    }
+
+    .chart-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .insight {
+      text-align: center;
+      margin-top: 40px;
+      padding: 0 100px;
+    }
+
+    .insight-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--brand-blue);
+      line-height: 1.4;
+    }
+
+    .insight-highlight {
+      color: var(--success-green);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <!-- Brand Accent -->
+  <div class="accent-bar"></div>
+
+  <!-- eSided Logo -->
+  <img src="../../assets-local/eSided-Logo.png" alt="eSided" class="esided-logo">
+
+  <!-- Main Content -->
+  <div class="content">
+    <h2 class="slide-title">The Numbers</h2>
+
+    <div class="chart-wrapper">
+      <!-- Chart will be embedded here by QuickChart API -->
+      <!-- For now, using a placeholder - will be generated dynamically -->
+      <div class="chart-container">
+        <img src="https://quickchart.io/chart?c={type:'bar',data:{labels:['Platform Cost','Config %26 Training','Value Created','Net ROI'],datasets:[{data:[-100,-47,479.6,332.6],backgroundColor:['rgba(211,52,56,0.85)','rgba(211,52,56,0.85)','rgba(16,124,16,0.85)','rgba(0,120,212,0.95)'],borderColor:['rgb(211,52,56)','rgb(211,52,56)','rgb(16,124,16)','rgb(0,120,212)'],borderWidth:3}]},options:{plugins:{datalabels:{anchor:'end',align:'top',color:'%23000000',font:{weight:'bold',size:28},formatter:'(value)=>value>0?%27+$%27+value+%27K%27:%27$%27+value+%27K%27'},title:{display:true,text:'First Year Financial Impact',font:{size:36,weight:'bold'},padding:20},legend:{display:false}},scales:{y:{ticks:{callback:'(value)=>%27$%27+value+%27K%27',font:{size:22},padding:10},grid:{color:'rgba(0,0,0,0.1)'}},x:{ticks:{font:{size:24,weight:'bold'},padding:10},grid:{display:false}}},layout:{padding:{top:40,bottom:20,left:20,right:20}}},backgroundColor:'white'}&width=1200&height=600" alt="ROI Chart">
+      </div>
+
+      <div class="insight">
+        <p class="insight-text">
+          <span class="insight-highlight">3.7 month payback</span> •
+          221 patterns encoded •
+          Permanent institutional asset
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Website Info -->
+  <div class="website-info">www.eSided.com | info@esided.com</div>
+</body>
+</html>

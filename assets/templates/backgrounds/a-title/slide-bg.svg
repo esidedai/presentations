@@ -1,0 +1,32 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<!-- White base -->
+<rect width="1920" height="1080" fill="white"/>
+
+<!-- Top-left subtle gradient blob (blue) -->
+<radialGradient id="grad-tl" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 0) scale(600 500)">
+<stop offset="0" stop-color="#0078d4" stop-opacity="0.08"/>
+<stop offset="1" stop-color="#0078d4" stop-opacity="0"/>
+</radialGradient>
+<rect width="600" height="500" fill="url(#grad-tl)"/>
+
+<!-- Bottom-right subtle gradient blob (purple) -->
+<radialGradient id="grad-br" cx="1" cy="1" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1920 1080) scale(-700 -600)">
+<stop offset="0" stop-color="#8764b8" stop-opacity="0.07"/>
+<stop offset="1" stop-color="#8764b8" stop-opacity="0"/>
+</radialGradient>
+<rect x="1220" y="480" width="700" height="600" fill="url(#grad-br)"/>
+
+<!-- Top accent bar (blue → purple gradient) -->
+<rect x="0" y="0" width="1920" height="8" fill="url(#accent-gradient)"/>
+<linearGradient id="accent-gradient" x1="0" y1="0" x2="1920" y2="0" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#0078d4"/>
+<stop offset="1" stop-color="#8764b8"/>
+</linearGradient>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="1920" height="1080" fill="white"/>
+</clipPath>
+</defs>
+</svg>

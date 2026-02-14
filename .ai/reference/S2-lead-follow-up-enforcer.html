@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Follow-Up Enforcer - The Authority Company AI Worker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #374151;
+            background: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Portrait container */
+        .resume-container {
+            width: 816px;
+            min-height: 1056px;
+            height: auto;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .resume-header {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            height: 80px;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .profession-icon {
+            width: 44px;
+            height: 44px;
+            opacity: 0.9;
+        }
+
+        .resume-header h1 {
+            font-size: 26px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .resume-header p {
+            font-size: 14px;
+            opacity: 0.95;
+            margin-top: 2px;
+            font-weight: 400;
+        }
+
+        /* Worker ID Badge */
+        .worker-id {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            background: white;
+            color: #1e40af;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* Main content - flex column layout */
+        .resume-main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            padding: 16px 24px;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* Section styling */
+        .resume-section {
+            margin: 0;
+        }
+
+        .resume-section h2 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #3b82f6;
+        }
+
+        /* Professional Summary - flowing paragraph */
+        .professional-summary {
+            font-size: 11.5px;
+            color: #374151;
+            line-height: 1.65;
+            padding: 12px 14px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+            text-align: justify;
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero-row {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 24px;
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 14px 16px;
+        }
+
+        /* Key Activities - bold, prominent */
+        .key-activities .activity-item {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 9px;
+            padding-left: 2px;
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        .key-activities .activity-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .key-activities .activity-item .check {
+            color: #1e40af;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* Stacked column with generous gap */
+        .stacked-column {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        /* Skill/System tags */
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: #1e40af;
+            color: white;
+            padding: 7px 16px;
+            border-radius: 14px;
+            font-size: 11px;
+            font-weight: 500;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .skill-tag.secondary {
+            background: #475569;
+        }
+
+        .skill-tag.accent {
+            background: #3b82f6;
+        }
+
+        /* Systems section - slightly lighter treatment */
+        .systems-section h2 {
+            font-size: 13px;
+            color: #374151;
+            border-bottom-color: #94a3b8;
+        }
+
+        .systems-section .skill-tag {
+            background: #64748b;
+        }
+
+        .systems-section .skill-tag.secondary {
+            background: #475569;
+        }
+
+        .systems-section .skill-tag.accent {
+            background: #3b82f6;
+        }
+        /* ========== END HERO SECTION ========== */
+
+        /* What Worker Handles - full width with 2-column flow */
+        .responsibilities {
+            column-count: 2;
+            column-gap: 28px;
+        }
+
+        .responsibilities li {
+            font-size: 11px;
+            color: #4b5563;
+            margin-bottom: 7px;
+            line-height: 1.5;
+            position: relative;
+            padding-left: 16px;
+            break-inside: avoid;
+        }
+
+        .responsibilities li::before {
+            content: "→";
+            color: #1e40af;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Trust row - both tall sections paired */
+        .trust-row {
+            display: grid;
+            grid-template-columns: 290px 1fr;
+            gap: 20px;
+        }
+
+        /* Success Measures */
+        .success-measures h4 {
+            font-size: 12px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 4px;
+            border-left: 3px solid #3b82f6;
+            padding-left: 10px;
+        }
+
+        .success-measures p {
+            font-size: 11px;
+            color: #4b5563;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            padding-left: 13px;
+        }
+
+        .success-measures p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* When It Stops - 2×2 card grid */
+        .behavior-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .behavior-card {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 10px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .behavior-card h4 {
+            font-size: 11px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 5px;
+        }
+
+        .behavior-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .behavior-card li {
+            font-size: 10px;
+            color: #4b5563;
+            margin-bottom: 2px;
+            padding-left: 12px;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .behavior-card li::before {
+            content: "•";
+            color: #3b82f6;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Value Proposition - full width conclusion */
+        .value-proposition {
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            border: 1px solid #93c5fd;
+            border-radius: 8px;
+            padding: 14px 16px;
+        }
+
+        .value-proposition h3 {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 8px;
+        }
+
+        .value-proposition > p {
+            font-size: 11px;
+            color: #374151;
+            line-height: 1.55;
+            margin-bottom: 12px;
+        }
+
+        .value-proposition strong {
+            color: #1e40af;
+        }
+
+        .value-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .value-metric {
+            text-align: center;
+            padding: 10px 8px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 6px;
+        }
+
+        .value-metric h4 {
+            font-size: 10px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .value-metric p {
+            font-size: 10px;
+            color: #4b5563;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+            .resume-container {
+                width: 8.5in;
+                min-height: 11in;
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Header -->
+        <div class="resume-header">
+            <svg class="profession-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            <div>
+                <h1>Lead Follow-Up Enforcer</h1>
+                <p>No one falls through. Not after two years. Not ever.</p>
+            </div>
+            <span class="worker-id">S2</span>
+        </div>
+
+        <div class="resume-main-content">
+            <!-- The Story - Flowing Paragraph -->
+            <div class="professional-summary">
+                Lead comes in. Someone sends an email. Maybe another a few days later. Your sales cycle is 90–120 days, sometimes two years. But the team exhausts the funnel every quarter and resets. The person who wasn't ready in January and is ready in March? Nobody followed up. People fall through. With this worker, lead submits inquiry and first touch goes out within minutes—personalized based on what they asked about. Day 2, another angle. Day 5, different approach. Every touch logged. If they reply, the sequence stops and a human takes over. If they go quiet, it continues. When they come back two years later, there's complete history.
+            </div>
+
+            <!-- ========== HERO ROW ========== -->
+            <div class="hero-row">
+                <div class="resume-section key-activities">
+                    <h2>What It Does</h2>
+                    <div class="activity-item"><span class="check">✓</span> Triggers the right sequence immediately</div>
+                    <div class="activity-item"><span class="check">✓</span> Sends touches on schedule for months</div>
+                    <div class="activity-item"><span class="check">✓</span> Logs every attempt automatically</div>
+                    <div class="activity-item"><span class="check">✓</span> Stops the moment someone replies</div>
+                </div>
+
+                <div class="stacked-column">
+                    <div class="resume-section">
+                        <h2>What It's Good At</h2>
+                        <div class="skill-tags">
+                            <span class="skill-tag">First touch in minutes</span>
+                            <span class="skill-tag secondary">Every touch documented</span>
+                            <span class="skill-tag accent">Knows when to stop</span>
+                            <span class="skill-tag">Remembers for two years</span>
+                        </div>
+                    </div>
+
+                    <div class="resume-section systems-section">
+                        <h2>What Systems Does It Interact With</h2>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Salesforce</span>
+                            <span class="skill-tag secondary">Sales Engagement</span>
+                            <span class="skill-tag accent">Email</span>
+                            <span class="skill-tag">SMS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ========== END HERO ROW ========== -->
+
+            <!-- Full List -->
+            <div class="resume-section">
+                <h2>Everything It Handles</h2>
+                <ul class="responsibilities">
+                    <li>Triggers the right sequence the moment an inquiry arrives</li>
+                    <li>Sends templated touches on schedule—days, weeks, months</li>
+                    <li>Logs every contact attempt automatically in Salesforce</li>
+                    <li>Rotates through message variants so outreach stays fresh</li>
+                    <li>Pauses immediately when someone responds—human takes over</li>
+                    <li>Tracks complete history for two-year comebacks</li>
+                </ul>
+            </div>
+
+            <!-- Trust Row -->
+            <div class="trust-row">
+                <div class="resume-section success-measures">
+                    <h2>How You'll Know It's Working</h2>
+                    <h4>No one forgotten</h4>
+                    <p>Every inquiry gets consistent follow-up, even across 24 months</p>
+                    <h4>Complete history</h4>
+                    <p>When someone returns after two years, every touch is there</p>
+                    <h4>Team stops exhausting themselves</h4>
+                    <p>No more "reset the funnel" every quarter</p>
+                </div>
+
+                <div class="resume-section">
+                    <h2>When It Stops and Asks First</h2>
+                    <div class="behavior-grid">
+                        <div class="behavior-card">
+                            <h4>Someone replied</h4>
+                            <ul>
+                                <li>Pauses everything</li>
+                                <li>Human conversation starts</li>
+                                <li>No automated interference</li>
+                            </ul>
+                        </div>
+                        <div class="behavior-card">
+                            <h4>Someone's upset</h4>
+                            <ul>
+                                <li>Stops sequence immediately</li>
+                                <li>Alerts rep for review</li>
+                                <li>Protects the relationship</li>
+                            </ul>
+                        </div>
+                        <div class="behavior-card">
+                            <h4>"Need this week"</h4>
+                            <ul>
+                                <li>Recognizes urgency language</li>
+                                <li>Escalates to senior rep</li>
+                                <li>Hot lead treatment</li>
+                            </ul>
+                        </div>
+                        <div class="behavior-card">
+                            <h4>They're away</h4>
+                            <ul>
+                                <li>Detects out-of-office</li>
+                                <li>Pauses until return date</li>
+                                <li>Resumes automatically</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Value Proposition -->
+            <div class="value-proposition">
+                <h3>Who This Helps</h3>
+                <p><strong>Sales team</strong> stops exhausting themselves every quarter. <strong>Leads that weren't ready</strong> stay warm until they are. <strong>Bob</strong> sees more qualified conversations without more headcount. The two-year comeback has complete history instead of "who talked to this person?"</p>
+                <div class="value-metrics">
+                    <div class="value-metric">
+                        <h4>Build</h4>
+                        <p>Straightforward—templates exist, triggers are clear</p>
+                    </div>
+                    <div class="value-metric">
+                        <h4>You'll See It</h4>
+                        <p>Week 2: sequences running automatically</p>
+                    </div>
+                    <div class="value-metric">
+                        <h4>Trust Timeline</h4>
+                        <p>Month 1: approve each. Week 5: let it run.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

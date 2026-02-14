@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Slide 12: They Deployed 5 AI Workers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/brand.css">
+  <style>
+    body { background: #f5fafd; }
+
+    .slide-bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1920px; height: 1080px;
+      z-index: 0; pointer-events: none;
+    }
+
+    .layout {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1920px; height: 1080px;
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 140px;
+    }
+
+    .slide-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--dark-gray);
+      line-height: 1.15;
+      margin: 0 0 48px 0;
+    }
+
+    .worker-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .worker {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 24px;
+      align-items: start;
+      background: white;
+      border-radius: 12px;
+      padding: 28px 36px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+    }
+
+    .worker-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--brand-blue);
+      line-height: 1;
+      padding-top: 2px;
+    }
+
+    .worker-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .worker-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--dark-gray);
+    }
+
+    .worker-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: #8a8886;
+    }
+
+    .bottom-note {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      color: #8a8886;
+      margin-top: 36px;
+      text-align: center;
+    }
+
+    .e-badge {
+      position: absolute;
+      bottom: 40px; right: 40px;
+      width: 48px; height: auto;
+      opacity: 0.08; z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <img src="../../../../assets/From-Figma/light-background-with-shapes.svg" alt="" class="slide-bg">
+
+  <div class="layout">
+    <h2 class="slide-heading">They Deployed 5 AI Workers</h2>
+
+    <div class="worker-list">
+      <div class="worker">
+        <div class="worker-num">1</div>
+        <div class="worker-content">
+          <div class="worker-name">Invoice Processor</div>
+          <div class="worker-desc">Codes 800 invoices/month with 99.4% accuracy</div>
+        </div>
+      </div>
+      <div class="worker">
+        <div class="worker-num">2</div>
+        <div class="worker-content">
+          <div class="worker-name">Pipeline Builder</div>
+          <div class="worker-desc">Structures CRM data into actionable pipeline stages</div>
+        </div>
+      </div>
+      <div class="worker">
+        <div class="worker-num">3</div>
+        <div class="worker-content">
+          <div class="worker-name">Outreach Drafter</div>
+          <div class="worker-desc">Writes personalized client communications at scale</div>
+        </div>
+      </div>
+      <div class="worker">
+        <div class="worker-num">4</div>
+        <div class="worker-content">
+          <div class="worker-name">Talent Hunter</div>
+          <div class="worker-desc">Screens candidates and schedules interviews autonomously</div>
+        </div>
+      </div>
+      <div class="worker">
+        <div class="worker-num">5</div>
+        <div class="worker-content">
+          <div class="worker-name">Content Co-Pilot</div>
+          <div class="worker-desc">Writes blog posts, social updates, and marketing content</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="bottom-note">Each one does real, complete work — not suggestions</p>
+  </div>
+
+  <img src="../../../../assets/From-Figma/eSided-e-only-of-logo.svg" alt="" class="e-badge">
+  <script src="../shared/slide-toolbar.js"></script>
+</body>
+</html>

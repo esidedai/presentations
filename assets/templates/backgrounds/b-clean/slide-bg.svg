@@ -1,0 +1,87 @@
+<svg width="1920" height="1080" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<!-- White base -->
+<rect width="1280" height="720" fill="white"/>
+<!-- Subtle blue wash -->
+<rect width="1280" height="720" fill="#0886C8" fill-opacity="0.04"/>
+
+<!-- Large hexagon, bottom-center, mostly off-canvas -->
+<path d="M440 760L800 550L1160 760L1159.8 1180L799 1420L439 1180L440 760Z" fill="#0886C8" fill-opacity="0.06"/>
+<path d="M550 825L800 680L1050 825L1049.8 1115L799 1260L549 1115L550 825Z" fill="#0886C8" fill-opacity="0.04"/>
+
+<!-- Large hexagon, top-right, partially off-canvas -->
+<path d="M1050 -120L1600 -480L2150 -120L2149.6 600L1598 950L1048 600L1050 -120Z" fill="#0886C8" fill-opacity="0.04"/>
+<path d="M1210 -25L1600 -260L1990 -25L1989.8 490L1598 725L1208 490L1210 -25Z" fill="#0886C8" fill-opacity="0.04"/>
+
+<!-- Small hexagon, top-left, partially off-canvas -->
+<path d="M-560 -320L-250 -500L65 -320L64.8 60L-252 240L-561 60L-560 -320Z" fill="#0886C8" fill-opacity="0.04"/>
+
+<!-- Dot grid cluster, upper-center area -->
+<g clip-path="url(#clip1)" opacity="0.12">
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(710 2)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(710 31)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(710 60)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(710 89)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(710 118)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(739 2)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(739 31)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(739 60)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(739 89)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(739 118)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(768 2)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(768 31)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(768 60)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(768 89)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(768 118)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(797 2)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(797 31)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(797 60)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(797 89)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(797 118)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(826 2)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(826 31)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(826 60)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(826 89)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(826 118)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(855 2)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(855 31)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(855 60)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(855 89)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(855 118)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(884 2)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(884 31)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(884 60)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(884 89)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(884 118)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(913 2)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(913 31)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(913 60)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(913 89)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(913 118)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(942 2)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(942 31)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(942 60)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(942 89)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(942 118)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(971 2)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(971 31)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(971 60)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(971 89)" fill="#0886C8"/>
+<circle cx="3.4" cy="3.4" r="3.4" transform="translate(971 118)" fill="#0886C8"/>
+</g>
+
+<!-- Small accent hexagon, right side -->
+<path d="M1150 470L1200 440L1250 470L1249.9 530L1199 560L1149 530L1150 470Z" fill="#0886C8" fill-opacity="0.05"/>
+
+<!-- Small accent hexagon, bottom-left -->
+<path d="M80 620L130 590L180 620L179.9 680L129 710L79 680L80 620Z" fill="#0886C8" fill-opacity="0.04"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="1280" height="720" fill="white"/>
+</clipPath>
+<clipPath id="clip1">
+<rect x="706" y="-2" width="272" height="128" fill="white"/>
+</clipPath>
+</defs>
+</svg>

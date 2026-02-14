@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Slide 2: The Harvest (1800s)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/brand.css">
+  <style>
+    body {
+      background: #f5fafd;
+    }
+
+    .slide-bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1920px;
+      height: 1080px;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .split-layout {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1920px;
+      height: 1080px;
+      display: grid;
+      grid-template-columns: 55% 45%;
+      z-index: 5;
+    }
+
+    /* Image area — placeholder until historical photo sourced */
+    .image-panel {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #2c1810 0%, #5a3a28 40%, #8b6914 100%);
+    }
+
+    .image-panel::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background:
+        radial-gradient(circle at 30% 60%, rgba(255,220,150,0.12) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(139,105,20,0.15) 0%, transparent 40%);
+    }
+
+    .image-placeholder-label {
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: rgba(255,255,255,0.4);
+      z-index: 6;
+      background: rgba(0,0,0,0.2);
+      padding: 6px 14px;
+      border-radius: 4px;
+    }
+
+    .era-label {
+      position: absolute;
+      top: 80px;
+      left: 60px;
+      font-family: 'Playfair Display', serif;
+      font-size: 180px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.08);
+      z-index: 6;
+      line-height: 1;
+    }
+
+    /* Text panel */
+    .text-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 100px 100px 100px 80px;
+      position: relative;
+    }
+
+    .act-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--brand-blue);
+      margin-bottom: 24px;
+    }
+
+    .slide-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      font-weight: 700;
+      color: var(--dark-gray);
+      line-height: 1.15;
+      margin: 0 0 40px 0;
+    }
+
+    .stat-callout {
+      font-family: 'Inter', sans-serif;
+      font-size: 72px;
+      font-weight: 700;
+      color: var(--brand-blue);
+      line-height: 1;
+      margin: 0 0 16px 0;
+    }
+
+    .stat-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: #605e5c;
+      line-height: 1.5;
+      margin: 0 0 40px 0;
+    }
+
+    .context-note {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: #8a8886;
+      line-height: 1.5;
+      border-left: 4px solid var(--brand-blue);
+      padding-left: 20px;
+    }
+
+    /* "e" badge subtle watermark */
+    .e-badge {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      width: 48px;
+      height: auto;
+      opacity: 0.08;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background (behind text panel only, image panel has its own) -->
+  <img src="../../../../assets/From-Figma/light-background-with-shapes.svg" alt="" class="slide-bg">
+
+
+  <!-- Split Layout -->
+  <div class="split-layout">
+    <!-- Left: Image -->
+    <div class="image-panel">
+      <div class="era-label">1800s</div>
+      <div class="image-placeholder-label">&#128247; Historical harvest scene — image pending</div>
+    </div>
+
+    <!-- Right: Text -->
+    <div class="text-panel">
+      <div class="act-label">Historical Context</div>
+      <h2 class="slide-heading">The Harvest</h2>
+      <div class="stat-callout">95%</div>
+      <p class="stat-label">of Americans worked in agriculture</p>
+      <p class="context-note">Labor-intensive harvest requiring hundreds of workers per farm. Work was manual, seasonal, and physically exhausting.</p>
+    </div>
+  </div>
+
+  <!-- "e" watermark -->
+  <img src="../../../../assets/From-Figma/eSided-e-only-of-logo.svg" alt="" class="e-badge">
+
+  <!-- Toolbar: back to index + PNG export -->
+  <script src="../shared/slide-toolbar.js"></script>
+</body>
+</html>

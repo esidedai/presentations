@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Slide 22: Examples from Meridian</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/brand.css">
+  <style>
+    body { background: #f5fafd; }
+    .slide-bg { position: absolute; top: 0; left: 0; width: 1920px; height: 1080px; z-index: 0; pointer-events: none; }
+
+    .layout {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px; z-index: 5;
+      display: flex; flex-direction: column;
+      justify-content: center; padding: 0 180px;
+    }
+
+    .slide-heading { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700; color: var(--dark-gray); line-height: 1.15; margin: 0 0 52px 0; }
+
+    .examples { display: flex; flex-direction: column; gap: 28px; }
+
+    .example {
+      background: white;
+      border-radius: 14px;
+      padding: 36px 44px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+      display: grid;
+      grid-template-columns: 48px 1fr auto;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .example-num { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; color: var(--brand-blue); }
+    .example-text { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 400; color: var(--dark-gray); line-height: 1.4; }
+    .example-text em { font-style: normal; color: #8a8886; font-size: 24px; display: block; margin-top: 6px; }
+    .example-value { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 600; color: var(--success-green); white-space: nowrap; padding-top: 4px; }
+
+    .e-badge { position: absolute; bottom: 40px; right: 40px; width: 48px; height: auto; opacity: 0.08; z-index: 10; }
+  </style>
+</head>
+<body>
+  <img src="../../../../assets/From-Figma/light-background-with-shapes.svg" alt="" class="slide-bg">
+  <div class="layout">
+    <h2 class="slide-heading">Scar Tissue from Meridian</h2>
+
+    <div class="examples">
+      <div class="example">
+        <div class="example-num">1</div>
+        <div class="example-text">"Never send tax estimates on Fridays"<em>Learned after a client panic that nearly ended the relationship</em></div>
+        <div class="example-value">$50K+ saved</div>
+      </div>
+      <div class="example">
+        <div class="example-num">2</div>
+        <div class="example-text">"Always ask construction clients about prevailing wage"<em>Missed during an audit — preventable with the right question</em></div>
+        <div class="example-value">$100K+ saved</div>
+      </div>
+      <div class="example">
+        <div class="example-num">3</div>
+        <div class="example-text">"Flag invoices with manual journal entries"<em>This pattern is how they found fraud — now encoded permanently</em></div>
+        <div class="example-value">$10K-100K saved</div>
+      </div>
+    </div>
+  </div>
+  <img src="../../../../assets/From-Figma/eSided-e-only-of-logo.svg" alt="" class="e-badge">
+  <script src="../shared/slide-toolbar.js"></script>
+</body>
+</html>
