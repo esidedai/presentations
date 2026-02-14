@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Slide 12: What Your CRM Holds vs What Your People Know</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/brand.css">
+  <style>
+    body { background: #f5fafd; }
+
+    .slide-bg {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px;
+      z-index: 0; pointer-events: none;
+    }
+
+    .layout {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px; z-index: 5;
+      display: flex; flex-direction: column;
+      justify-content: center; padding: 0 100px;
+    }
+
+    .slide-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px; font-weight: 700;
+      color: var(--dark-gray); line-height: 1.15;
+      margin: 0 0 36px 0; text-align: center;
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px; margin-bottom: 36px;
+    }
+
+    .col {
+      border-radius: 16px; padding: 36px 40px;
+    }
+
+    .col-crm {
+      background: #f5f5f5;
+    }
+
+    .col-sarah {
+      background: white;
+      box-shadow: 0 2px 16px rgba(0,120,212,0.08);
+      border: 2px solid rgba(0,120,212,0.12);
+    }
+
+    .col-header {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px; font-weight: 600;
+      margin-bottom: 28px; padding-bottom: 16px;
+      border-bottom: 2px solid #e1dfdd;
+    }
+
+    .col-crm .col-header { color: #8a8886; }
+    .col-sarah .col-header { color: var(--brand-blue); }
+
+    .row {
+      display: flex; flex-direction: column;
+      gap: 4px; margin-bottom: 20px;
+    }
+
+    .row:last-child { margin-bottom: 0; }
+
+    .row-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 1.5px;
+      color: #b0b0b0;
+    }
+
+    .row-value {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px; font-weight: 400; line-height: 1.4;
+    }
+
+    .col-crm .row-value { color: #605e5c; }
+    .col-sarah .row-value { color: var(--dark-gray); font-weight: 500; }
+
+    .bottom-text {
+      text-align: center;
+    }
+
+    .bottom-bold {
+      font-family: 'Inter', sans-serif;
+      font-size: 26px; font-weight: 600;
+      color: var(--dark-gray); line-height: 1.5;
+      margin: 0 0 8px 0;
+    }
+
+    .bottom-question {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px; font-weight: 400;
+      color: var(--brand-blue); line-height: 1.5;
+      margin: 0;
+    }
+
+    .e-badge {
+      position: absolute; bottom: 40px; right: 40px;
+      width: 48px; height: auto; opacity: 0.08; z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <img src="../../../../assets/From-Figma/light-background-with-shapes.svg" alt="" class="slide-bg">
+
+  <div class="layout">
+    <h2 class="slide-heading">What Your CRM Holds vs What Your People Know</h2>
+
+    <div class="columns">
+      <div class="col col-crm">
+        <div class="col-header">What HubSpot Holds</div>
+        <div class="row">
+          <div class="row-label">Contact</div>
+          <div class="row-value">Contact name, title, deal stage</div>
+        </div>
+        <div class="row">
+          <div class="row-label">Deal Value</div>
+          <div class="row-value">$60,000</div>
+        </div>
+        <div class="row">
+          <div class="row-label">Status</div>
+          <div class="row-value">"Proposal Sent"</div>
+        </div>
+        <div class="row">
+          <div class="row-label">Industry</div>
+          <div class="row-value">Manufacturing</div>
+        </div>
+      </div>
+
+      <div class="col col-sarah">
+        <div class="col-header">What Sarah Actually Knows</div>
+        <div class="row">
+          <div class="row-label">Context</div>
+          <div class="row-value">CEO just went through leadership transition, evaluating all vendors</div>
+        </div>
+        <div class="row">
+          <div class="row-label">Real Value</div>
+          <div class="row-value">Really worth $180K over three years if we lead with advisory</div>
+        </div>
+        <div class="row">
+          <div class="row-label">Timing</div>
+          <div class="row-value">CFO takes 3 weeks to review anything — following up now is counterproductive</div>
+        </div>
+        <div class="row">
+          <div class="row-label">Approach</div>
+          <div class="row-value">Manufacturing prospects respond to operational language, not compliance framing</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-text">
+      <p class="bottom-bold">No system built around database fields can capture the right column.</p>
+      <p class="bottom-question">Every firm in this room has a Sarah. Where does her knowledge live when she leaves?</p>
+    </div>
+  </div>
+
+  <img src="../../../../assets/From-Figma/eSided-e-only-of-logo.svg" alt="" class="e-badge">
+  <script src="../shared/slide-toolbar.js"></script>
+</body>
+</html>

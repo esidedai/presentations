@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Slide 27: What the Spreadsheet Misses</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/brand.css">
+  <style>
+    body { background: #f5fafd; }
+
+    .slide-bg {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px;
+      z-index: 0; pointer-events: none;
+    }
+
+    .layout {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px; z-index: 5;
+      display: flex; flex-direction: column;
+      justify-content: center; padding: 0 140px;
+    }
+
+    .slide-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; font-weight: 700;
+      color: var(--dark-gray); line-height: 1.15;
+      margin: 0 0 16px 0;
+    }
+
+    .total {
+      font-family: 'Inter', sans-serif;
+      font-size: 72px; font-weight: 700;
+      color: var(--brand-blue); line-height: 1;
+      margin: 0 0 8px 0;
+    }
+
+    .total-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 26px; font-weight: 400;
+      color: #8a8886; margin: 0 0 40px 0;
+    }
+
+    .workers {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px; margin-bottom: 40px;
+    }
+
+    .worker-card {
+      background: white; border-radius: 12px;
+      padding: 28px 24px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+      text-align: center;
+    }
+
+    .worker-count {
+      font-family: 'Inter', sans-serif;
+      font-size: 40px; font-weight: 700;
+      color: var(--brand-blue); line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .worker-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px; font-weight: 600;
+      color: var(--dark-gray); margin-bottom: 4px;
+    }
+
+    .worker-role {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px; font-weight: 400;
+      color: #8a8886;
+    }
+
+    .worker-bar {
+      height: 6px; border-radius: 3px;
+      background: #e1dfdd; margin-top: 16px;
+      overflow: hidden;
+    }
+
+    .worker-bar-fill {
+      height: 100%; border-radius: 3px;
+      background: var(--brand-blue);
+    }
+
+    .closer {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px; font-weight: 600;
+      color: var(--dark-gray); line-height: 1.5;
+      text-align: center;
+    }
+
+    .e-badge {
+      position: absolute; bottom: 40px; right: 40px;
+      width: 48px; height: auto; opacity: 0.08; z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <img src="../../../../assets/From-Figma/light-background-with-shapes.svg" alt="" class="slide-bg">
+
+  <div class="layout">
+    <h2 class="slide-heading">What the Spreadsheet Misses</h2>
+    <div class="total">221</div>
+    <p class="total-label">patterns encoded across 5 workers</p>
+
+    <div class="workers">
+      <div class="worker-card">
+        <div class="worker-count">52</div>
+        <div class="worker-name">Tom's instincts</div>
+        <div class="worker-role">12 years of vendor patterns</div>
+        <div class="worker-bar"><div class="worker-bar-fill" style="width: 47%"></div></div>
+      </div>
+      <div class="worker-card">
+        <div class="worker-count">109</div>
+        <div class="worker-name">Sarah's judgment</div>
+        <div class="worker-role">Deal judgment + voice</div>
+        <div class="worker-bar"><div class="worker-bar-fill" style="width: 100%"></div></div>
+      </div>
+      <div class="worker-card">
+        <div class="worker-count">31</div>
+        <div class="worker-name">Katie's instincts</div>
+        <div class="worker-role">Hiring patterns</div>
+        <div class="worker-bar"><div class="worker-bar-fill" style="width: 28%"></div></div>
+      </div>
+      <div class="worker-card">
+        <div class="worker-count">47</div>
+        <div class="worker-name">Brand voice</div>
+        <div class="worker-role">Meridian's tone + rules</div>
+        <div class="worker-bar"><div class="worker-bar-fill" style="width: 43%"></div></div>
+      </div>
+    </div>
+
+    <p class="closer">This knowledge used to walk out the door.<br>Now it belongs to the organization.</p>
+  </div>
+
+  <img src="../../../../assets/From-Figma/eSided-e-only-of-logo.svg" alt="" class="e-badge">
+  <script src="../shared/slide-toolbar.js"></script>
+</body>
+</html>

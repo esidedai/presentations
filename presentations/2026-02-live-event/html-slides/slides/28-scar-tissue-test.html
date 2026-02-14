@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Slide 28: The Scar Tissue Test</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/brand.css">
+  <style>
+    body { background: #f5fafd; }
+
+    .slide-bg {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px;
+      z-index: 0; pointer-events: none;
+    }
+
+    .layout {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px; z-index: 5;
+      display: flex; flex-direction: column;
+      justify-content: center; padding: 0 100px;
+    }
+
+    .slide-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; font-weight: 700;
+      color: var(--dark-gray); line-height: 1.15;
+      margin: 0 0 12px 0; text-align: center;
+    }
+
+    .sub-heading {
+      font-family: 'Inter', sans-serif;
+      font-size: 26px; font-weight: 400;
+      color: #8a8886; text-align: center;
+      margin: 0 0 36px 0;
+    }
+
+    .scenarios {
+      display: flex; flex-direction: column;
+      gap: 20px;
+    }
+
+    .scenario {
+      display: grid;
+      grid-template-columns: 180px 1fr 1fr;
+      gap: 24px; align-items: start;
+    }
+
+    .person {
+      background: white; border-radius: 10px;
+      padding: 20px 16px; text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+
+    .person-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px; font-weight: 600;
+      color: var(--dark-gray); margin-bottom: 4px;
+    }
+
+    .person-years {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px; font-weight: 400; color: #8a8886;
+    }
+
+    .outcome {
+      border-radius: 10px; padding: 20px 24px;
+    }
+
+    .outcome-without {
+      background: #fef2f2;
+      border-left: 4px solid #d13438;
+    }
+
+    .outcome-with {
+      background: #f0fdf4;
+      border-left: 4px solid var(--success-green);
+    }
+
+    .outcome-header {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .outcome-without .outcome-header { color: #d13438; }
+    .outcome-with .outcome-header { color: var(--success-green); }
+
+    .outcome-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px; font-weight: 400;
+      color: var(--dark-gray); line-height: 1.4;
+    }
+
+    .e-badge {
+      position: absolute; bottom: 40px; right: 40px;
+      width: 48px; height: auto; opacity: 0.08; z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <img src="../../../../assets/From-Figma/light-background-with-shapes.svg" alt="" class="slide-bg">
+
+  <div class="layout">
+    <h2 class="slide-heading">The Scar Tissue Test</h2>
+    <p class="sub-heading">What walks out the door when a key person leaves?</p>
+
+    <div class="scenarios">
+      <div class="scenario">
+        <div class="person">
+          <div class="person-name">Tom</div>
+          <div class="person-years">12 years</div>
+        </div>
+        <div class="outcome outcome-without">
+          <div class="outcome-header">Without AI Workers</div>
+          <div class="outcome-text">6 months relearning. Exception rate resets to 15%.</div>
+        </div>
+        <div class="outcome outcome-with">
+          <div class="outcome-header">With AI Workers</div>
+          <div class="outcome-text">52 patterns preserved. Starts at month 6. Exception rate stays at 4%.</div>
+        </div>
+      </div>
+
+      <div class="scenario">
+        <div class="person">
+          <div class="person-name">Sarah</div>
+          <div class="person-years">20 years</div>
+        </div>
+        <div class="outcome outcome-without">
+          <div class="outcome-header">Without AI Workers</div>
+          <div class="outcome-text">Pipeline goes cold. 18 months to rebuild relationships.</div>
+        </div>
+        <div class="outcome outcome-with">
+          <div class="outcome-header">With AI Workers</div>
+          <div class="outcome-text">109 patterns preserved. Voice, scoring, angles — all encoded.</div>
+        </div>
+      </div>
+
+      <div class="scenario">
+        <div class="person">
+          <div class="person-name">Katie</div>
+          <div class="person-years">3 years</div>
+        </div>
+        <div class="outcome outcome-without">
+          <div class="outcome-header">Without AI Workers</div>
+          <div class="outcome-text">Hiring patterns reset to zero. Sourcing channels forgotten.</div>
+        </div>
+        <div class="outcome outcome-with">
+          <div class="outcome-header">With AI Workers</div>
+          <div class="outcome-text">31 patterns preserved. Hiring gets smarter even during vacancy.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <img src="../../../../assets/From-Figma/eSided-e-only-of-logo.svg" alt="" class="e-badge">
+  <script src="../shared/slide-toolbar.js"></script>
+</body>
+</html>

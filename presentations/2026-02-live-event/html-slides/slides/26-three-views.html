@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Slide 26: Three Views of Value</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/brand.css">
+  <style>
+    body { background: #f5fafd; }
+
+    .slide-bg {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px;
+      z-index: 0; pointer-events: none;
+    }
+
+    .layout {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px; z-index: 5;
+      display: flex; flex-direction: column;
+      justify-content: center; padding: 0 140px;
+    }
+
+    .act-label {
+      font-family: 'Inter', sans-serif; font-size: 16px;
+      font-weight: 600; text-transform: uppercase;
+      letter-spacing: 3px; color: var(--brand-blue);
+      margin-bottom: 16px;
+    }
+
+    .slide-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; font-weight: 700;
+      color: var(--dark-gray); line-height: 1.15;
+      margin: 0 0 48px 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+    }
+
+    .card {
+      background: white; border-radius: 14px;
+      padding: 40px 36px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+      display: flex; flex-direction: column; gap: 16px;
+      border-top: 4px solid #e1dfdd;
+    }
+
+    .card:nth-child(1) { border-top-color: var(--success-green); }
+    .card:nth-child(2) { border-top-color: var(--brand-blue); }
+    .card:nth-child(3) { border-top-color: var(--dark-gray); }
+
+    .card-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px; font-weight: 600;
+      color: #8a8886; text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .card-value {
+      font-family: 'Inter', sans-serif;
+      font-size: 40px; font-weight: 700;
+      color: var(--dark-gray); line-height: 1.1;
+    }
+
+    .card:nth-child(1) .card-value { color: var(--success-green); }
+    .card:nth-child(2) .card-value { color: var(--brand-blue); }
+
+    .card-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px; font-weight: 400;
+      color: #605e5c; line-height: 1.5;
+    }
+
+    .bottom-note {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px; color: #8a8886;
+      margin-top: 40px; text-align: center;
+    }
+
+    .e-badge {
+      position: absolute; bottom: 40px; right: 40px;
+      width: 48px; height: auto; opacity: 0.08; z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <img src="../../../../assets/From-Figma/light-background-with-shapes.svg" alt="" class="slide-bg">
+
+  <div class="layout">
+    <div class="act-label">Post-Demo Bridge</div>
+    <h2 class="slide-heading">Three Views of Value</h2>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-label">Financial ROI</div>
+        <div class="card-value">$332,600/yr</div>
+        <div class="card-desc">The math. Conservative methodology. Pays for the investment.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Capital View</div>
+        <div class="card-value">221 patterns</div>
+        <div class="card-desc">The durability. Encoded knowledge that never walks out the door.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Your Model</div>
+        <div class="card-value">Calculator</div>
+        <div class="card-desc">The conversation starter. Model what this looks like for your firm.</div>
+      </div>
+    </div>
+
+    <p class="bottom-note">Three lenses. Same workforce.</p>
+  </div>
+
+  <img src="../../../../assets/From-Figma/eSided-e-only-of-logo.svg" alt="" class="e-badge">
+  <script src="../shared/slide-toolbar.js"></script>
+</body>
+</html>

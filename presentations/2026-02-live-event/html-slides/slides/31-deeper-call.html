@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Slide 31: The Deeper Call</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/brand.css">
+  <style>
+    body { background: #f5fafd; }
+
+    .slide-bg {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px;
+      z-index: 0; pointer-events: none;
+    }
+
+    .layout {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px; z-index: 5;
+      display: flex; flex-direction: column;
+      justify-content: center; padding: 0 200px;
+    }
+
+    .headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; font-weight: 700;
+      color: var(--dark-gray); line-height: 1.2;
+      margin: 0 0 44px 0;
+    }
+
+    .headline span { color: var(--brand-blue); }
+
+    .people {
+      display: flex; flex-direction: column;
+      gap: 16px; margin-bottom: 48px;
+    }
+
+    .person-line {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px; font-weight: 400;
+      color: #605e5c; line-height: 1.5;
+      padding: 14px 24px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+
+    .person-line strong { color: var(--dark-gray); font-weight: 600; }
+
+    .closer {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px; font-weight: 700;
+      color: var(--brand-blue); line-height: 1.3;
+    }
+
+    .sub-closer {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px; font-weight: 400;
+      color: #605e5c; line-height: 1.5;
+      margin-top: 16px;
+    }
+
+    .e-badge {
+      position: absolute; bottom: 40px; right: 40px;
+      width: 48px; height: auto; opacity: 0.08; z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <img src="../../../../assets/From-Figma/light-background-with-shapes.svg" alt="" class="slide-bg">
+
+  <div class="layout">
+    <h2 class="headline">Your people are the <span>integration layer</span> right now.</h2>
+
+    <div class="people">
+      <div class="person-line"><strong>Your Tom</strong> is matching invoices.</div>
+      <div class="person-line"><strong>Your Sarah</strong> is researching prospects.</div>
+      <div class="person-line"><strong>Your Katie</strong> is waiting 73 days to fill a role.</div>
+    </div>
+
+    <p class="closer">They deserve to be the judgment layer.</p>
+    <p class="sub-closer">Your job: figure out what work should be eliminated.<br>Figure out what work is worthy of humans.</p>
+  </div>
+
+  <img src="../../../../assets/From-Figma/eSided-e-only-of-logo.svg" alt="" class="e-badge">
+  <script src="../shared/slide-toolbar.js"></script>
+</body>
+</html>

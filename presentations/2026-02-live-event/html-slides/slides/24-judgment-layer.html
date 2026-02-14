@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Slide 24: Judgment Layer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/brand.css">
+  <style>
+    body { background: #f5fafd; }
+
+    .slide-bg {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px;
+      z-index: 0; pointer-events: none;
+    }
+
+    .layout {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px; z-index: 5;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; padding: 0 240px;
+    }
+
+    .headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px; font-weight: 700;
+      color: var(--dark-gray); line-height: 1.3;
+      margin: 0 0 40px 0;
+    }
+
+    .headline span { color: var(--brand-blue); }
+
+    .body-lines {
+      display: flex; flex-direction: column;
+      gap: 12px; margin-bottom: 56px;
+    }
+
+    .body-line {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px; font-weight: 400;
+      color: #605e5c; line-height: 1.5;
+    }
+
+    .shift {
+      display: flex; align-items: center;
+      gap: 24px;
+    }
+
+    .shift-from {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px; font-weight: 500;
+      color: #8a8886;
+      padding: 16px 32px;
+      background: #f0f0f0;
+      border-radius: 10px;
+    }
+
+    .shift-arrow {
+      font-size: 36px; color: var(--brand-blue);
+    }
+
+    .shift-to {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px; font-weight: 600;
+      color: var(--brand-blue);
+      padding: 16px 32px;
+      background: white;
+      border-radius: 10px;
+      border: 2px solid var(--brand-blue);
+      box-shadow: 0 2px 12px rgba(0,120,212,0.1);
+    }
+
+    .e-badge {
+      position: absolute; bottom: 40px; right: 40px;
+      width: 48px; height: auto; opacity: 0.08; z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <img src="../../../../assets/From-Figma/light-background-with-shapes.svg" alt="" class="slide-bg">
+
+  <div class="layout">
+    <p class="headline">Your people become<br>the <span>judgment layer</span>.</p>
+
+    <div class="body-lines">
+      <div class="body-line">See exceptions. Make decisions.</div>
+      <div class="body-line">Do work only humans should do.</div>
+    </div>
+
+    <div class="shift">
+      <div class="shift-from">Integration layer</div>
+      <div class="shift-arrow">&#8594;</div>
+      <div class="shift-to">Judgment layer</div>
+    </div>
+  </div>
+
+  <img src="../../../../assets/From-Figma/eSided-e-only-of-logo.svg" alt="" class="e-badge">
+  <script src="../shared/slide-toolbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Slide 22: The Gradient Shifts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/brand.css">
+  <style>
+    body { background: #f5fafd; }
+
+    .slide-bg {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px;
+      z-index: 0; pointer-events: none;
+    }
+
+    .layout {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px; z-index: 5;
+      display: flex; flex-direction: column;
+      justify-content: center; padding: 0 140px;
+    }
+
+    .slide-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; font-weight: 700;
+      color: var(--dark-gray); line-height: 1.15;
+      margin: 0 0 48px 0;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px; margin-bottom: 44px;
+    }
+
+    .period {
+      background: white; border-radius: 14px;
+      padding: 36px 28px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+      display: flex; flex-direction: column; gap: 16px;
+      border-top: 4px solid var(--brand-blue);
+    }
+
+    .period-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px; font-weight: 700;
+      color: var(--brand-blue);
+    }
+
+    .period-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px; font-weight: 400;
+      color: #605e5c; line-height: 1.5;
+    }
+
+    .period-bar {
+      height: 8px; border-radius: 4px;
+      background: #e1dfdd; position: relative;
+      overflow: hidden;
+    }
+
+    .period-bar-fill {
+      height: 100%; border-radius: 4px;
+      background: var(--brand-blue);
+    }
+
+    .period:nth-child(1) .period-bar-fill { width: 25%; }
+    .period:nth-child(2) .period-bar-fill { width: 50%; }
+    .period:nth-child(3) .period-bar-fill { width: 75%; }
+    .period:nth-child(4) .period-bar-fill { width: 100%; }
+
+    .bottom-note {
+      font-family: 'Inter', sans-serif;
+      font-size: 26px; font-weight: 500;
+      color: var(--dark-gray); line-height: 1.5;
+      text-align: center;
+    }
+
+    .e-badge {
+      position: absolute; bottom: 40px; right: 40px;
+      width: 48px; height: auto; opacity: 0.08; z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <img src="../../../../assets/From-Figma/light-background-with-shapes.svg" alt="" class="slide-bg">
+
+  <div class="layout">
+    <h2 class="slide-heading">The Gradient Shifts</h2>
+
+    <div class="timeline">
+      <div class="period">
+        <div class="period-label">Week 1</div>
+        <div class="period-desc">AI handles Data + Information</div>
+        <div class="period-bar"><div class="period-bar-fill"></div></div>
+      </div>
+      <div class="period">
+        <div class="period-label">Month 3</div>
+        <div class="period-desc">AI handles Data + Information + most Knowledge</div>
+        <div class="period-bar"><div class="period-bar-fill"></div></div>
+      </div>
+      <div class="period">
+        <div class="period-label">Month 6</div>
+        <div class="period-desc">AI handles routine Expertise patterns too</div>
+        <div class="period-bar"><div class="period-bar-fill"></div></div>
+      </div>
+      <div class="period">
+        <div class="period-label">Year 1</div>
+        <div class="period-desc">Humans focus on edge cases, insight, strategy</div>
+        <div class="period-bar"><div class="period-bar-fill"></div></div>
+      </div>
+    </div>
+
+    <p class="bottom-note">The system doesn't replace humans. It pushes the frontier of what it can handle, freeing humans to operate higher.</p>
+  </div>
+
+  <img src="../../../../assets/From-Figma/eSided-e-only-of-logo.svg" alt="" class="e-badge">
+  <script src="../shared/slide-toolbar.js"></script>
+</body>
+</html>

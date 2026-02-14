@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Slide 15: Wrong Category</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/brand.css">
+  <style>
+    body { background: #f5fafd; }
+
+    .slide-bg {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px;
+      z-index: 0; pointer-events: none;
+    }
+
+    .layout {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px; z-index: 5;
+      display: flex; flex-direction: column;
+      justify-content: center; padding: 0 200px;
+    }
+
+    .context-line {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px; font-weight: 400;
+      color: #8a8886; line-height: 1.5;
+      margin: 0 0 16px 0;
+    }
+
+    .headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px; font-weight: 700;
+      color: var(--dark-gray); line-height: 1.2;
+      margin: 0 0 48px 0;
+    }
+
+    .headline span { color: var(--brand-blue); }
+
+    .traits {
+      display: flex; flex-direction: column;
+      gap: 16px;
+    }
+
+    .trait {
+      font-family: 'Inter', sans-serif;
+      font-size: 30px; font-weight: 400;
+      color: #605e5c; line-height: 1.5;
+      padding: 18px 28px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      border-left: 4px solid var(--brand-blue);
+    }
+
+    .trait strong {
+      font-weight: 600;
+      color: var(--brand-blue);
+    }
+
+    .e-badge {
+      position: absolute; bottom: 40px; right: 40px;
+      width: 48px; height: auto; opacity: 0.08; z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <img src="../../../../assets/From-Figma/light-background-with-shapes.svg" alt="" class="slide-bg">
+
+  <div class="layout">
+    <p class="context-line">For CRM, "tool" was the right category. The expectation was wrong.</p>
+    <h2 class="headline">For AI, "tool" is the <span>wrong category</span> entirely.</h2>
+
+    <div class="traits">
+      <div class="trait"><strong>AI initiates.</strong> It doesn't wait for you to act.</div>
+      <div class="trait"><strong>AI has judgment.</strong> Not human judgment, but something you calibrate.</div>
+      <div class="trait"><strong>AI operates with autonomy.</strong> Autonomy you design, but autonomy nonetheless.</div>
+      <div class="trait"><strong>AI develops over time.</strong> It changes with use, feedback, context.</div>
+    </div>
+  </div>
+
+  <img src="../../../../assets/From-Figma/eSided-e-only-of-logo.svg" alt="" class="e-badge">
+  <script src="../shared/slide-toolbar.js"></script>
+</body>
+</html>

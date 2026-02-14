@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Slide 33: The Close</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/brand.css">
+  <style>
+    body { background: #f5fafd; }
+
+    .slide-bg {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px;
+      z-index: 0; pointer-events: none;
+    }
+
+    .layout {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px; z-index: 5;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; padding: 0 240px;
+    }
+
+    .headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px; font-weight: 700;
+      color: var(--dark-gray); line-height: 1.3;
+      margin: 0 0 32px 0;
+    }
+
+    .headline span { color: var(--brand-blue); }
+
+    .detail {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px; font-weight: 400;
+      color: #605e5c; line-height: 1.6;
+      margin: 0 0 48px 0;
+    }
+
+    .divider {
+      width: 120px; height: 3px;
+      background: #e1dfdd; margin-bottom: 48px;
+    }
+
+    .closer {
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; font-weight: 700;
+      color: var(--brand-blue); line-height: 1.3;
+      margin: 0;
+    }
+
+    .e-badge {
+      position: absolute; bottom: 40px; right: 40px;
+      width: 48px; height: auto; opacity: 0.08; z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <img src="../../../../assets/From-Figma/light-background-with-shapes.svg" alt="" class="slide-bg">
+
+  <div class="layout">
+    <p class="headline">In 1942, "<span>Computer</span>"<br>was a job title.</p>
+    <p class="detail">30-40 hours of hand calculations.<br>Now your phone does it in milliseconds.</p>
+    <div class="divider"></div>
+    <p class="closer">You're in the middle of that transition.</p>
+  </div>
+
+  <img src="../../../../assets/From-Figma/eSided-e-only-of-logo.svg" alt="" class="e-badge">
+  <script src="../shared/slide-toolbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Slide 21: Where the Value Actually Lives</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/brand.css">
+  <style>
+    body { background: #f5fafd; }
+
+    .slide-bg {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px;
+      z-index: 0; pointer-events: none;
+    }
+
+    .layout {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px; z-index: 5;
+      display: flex; flex-direction: column;
+      justify-content: center; padding: 0 140px;
+    }
+
+    .act-label {
+      font-family: 'Inter', sans-serif; font-size: 16px;
+      font-weight: 600; text-transform: uppercase;
+      letter-spacing: 3px; color: var(--brand-blue);
+      margin-bottom: 16px;
+    }
+
+    .slide-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; font-weight: 700;
+      color: var(--dark-gray); line-height: 1.15;
+      margin: 0 0 48px 0;
+    }
+
+    .spectrum {
+      display: flex; flex-direction: column;
+      gap: 0; margin-bottom: 40px;
+    }
+
+    .layer {
+      display: grid;
+      grid-template-columns: 200px 1fr 200px;
+      gap: 20px; align-items: center;
+      padding: 14px 24px;
+      border-radius: 8px;
+    }
+
+    .layer:nth-child(odd) { background: rgba(255,255,255,0.6); }
+
+    .layer-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px; font-weight: 600;
+      color: var(--dark-gray);
+    }
+
+    .layer-bar {
+      height: 24px; border-radius: 12px;
+      position: relative;
+    }
+
+    .layer-owner {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px; font-weight: 500;
+      text-align: right;
+    }
+
+    /* Bottom 3 — AI handles */
+    .layer:nth-child(n+5) .layer-bar { background: var(--brand-blue); }
+    .layer:nth-child(n+5) .layer-owner { color: var(--brand-blue); }
+
+    /* Middle 2 — Shared */
+    .layer:nth-child(3) .layer-bar,
+    .layer:nth-child(4) .layer-bar {
+      background: linear-gradient(90deg, var(--brand-blue) 0%, var(--success-green) 100%);
+    }
+    .layer:nth-child(3) .layer-owner,
+    .layer:nth-child(4) .layer-owner { color: #605e5c; }
+
+    /* Top 2 — Humans own */
+    .layer:nth-child(1) .layer-bar,
+    .layer:nth-child(2) .layer-bar { background: var(--success-green); }
+    .layer:nth-child(1) .layer-owner,
+    .layer:nth-child(2) .layer-owner { color: var(--success-green); }
+
+    .legend {
+      display: flex; gap: 48px;
+      justify-content: center;
+    }
+
+    .legend-item {
+      display: flex; align-items: center; gap: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 22px; color: #605e5c;
+    }
+
+    .legend-dot {
+      width: 16px; height: 16px;
+      border-radius: 50%;
+    }
+
+    .legend-dot.ai { background: var(--brand-blue); }
+    .legend-dot.shared { background: linear-gradient(90deg, var(--brand-blue), var(--success-green)); }
+    .legend-dot.human { background: var(--success-green); }
+
+    .e-badge {
+      position: absolute; bottom: 40px; right: 40px;
+      width: 48px; height: auto; opacity: 0.08; z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <img src="../../../../assets/From-Figma/light-background-with-shapes.svg" alt="" class="slide-bg">
+
+  <div class="layout">
+    <div class="act-label">The Shift</div>
+    <h2 class="slide-heading">Seven layers of what your people carry</h2>
+
+    <div class="spectrum">
+      <div class="layer">
+        <div class="layer-name">Foresight</div>
+        <div class="layer-bar"></div>
+        <div class="layer-owner">Humans own</div>
+      </div>
+      <div class="layer">
+        <div class="layer-name">Insight</div>
+        <div class="layer-bar"></div>
+        <div class="layer-owner">Humans own</div>
+      </div>
+      <div class="layer">
+        <div class="layer-name">Hindsight</div>
+        <div class="layer-bar"></div>
+        <div class="layer-owner">Shared</div>
+      </div>
+      <div class="layer">
+        <div class="layer-name">Expertise</div>
+        <div class="layer-bar"></div>
+        <div class="layer-owner">Shared</div>
+      </div>
+      <div class="layer">
+        <div class="layer-name">Knowledge</div>
+        <div class="layer-bar"></div>
+        <div class="layer-owner">AI handles</div>
+      </div>
+      <div class="layer">
+        <div class="layer-name">Information</div>
+        <div class="layer-bar"></div>
+        <div class="layer-owner">AI handles</div>
+      </div>
+      <div class="layer">
+        <div class="layer-name">Data</div>
+        <div class="layer-bar"></div>
+        <div class="layer-owner">AI handles</div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot human"></div> Humans own</div>
+      <div class="legend-item"><div class="legend-dot shared"></div> Humans + AI share</div>
+      <div class="legend-item"><div class="legend-dot ai"></div> AI handles</div>
+    </div>
+  </div>
+
+  <img src="../../../../assets/From-Figma/eSided-e-only-of-logo.svg" alt="" class="e-badge">
+  <script src="../shared/slide-toolbar.js"></script>
+</body>
+</html>

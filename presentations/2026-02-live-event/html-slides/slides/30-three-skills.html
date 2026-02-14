@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Slide 30: Three Skills Your Team Needs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/brand.css">
+  <style>
+    body { background: #f5fafd; }
+
+    .slide-bg {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px;
+      z-index: 0; pointer-events: none;
+    }
+
+    .layout {
+      position: absolute; top: 0; left: 0;
+      width: 1920px; height: 1080px; z-index: 5;
+      display: flex; flex-direction: column;
+      justify-content: center; padding: 0 140px;
+    }
+
+    .slide-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; font-weight: 700;
+      color: var(--dark-gray); line-height: 1.15;
+      margin: 0 0 48px 0;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+    }
+
+    .skill {
+      background: white; border-radius: 14px;
+      padding: 36px 32px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+      display: flex; flex-direction: column; gap: 16px;
+      border-top: 4px solid var(--brand-blue);
+    }
+
+    .skill-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 30px; font-weight: 700;
+      color: var(--brand-blue);
+    }
+
+    .skill-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px; font-weight: 400;
+      color: #605e5c; line-height: 1.5;
+    }
+
+    .skill-example {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px; font-weight: 400;
+      color: #8a8886; line-height: 1.5;
+      font-style: italic;
+      padding-top: 12px;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .e-badge {
+      position: absolute; bottom: 40px; right: 40px;
+      width: 48px; height: auto; opacity: 0.08; z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <img src="../../../../assets/From-Figma/light-background-with-shapes.svg" alt="" class="slide-bg">
+
+  <div class="layout">
+    <h2 class="slide-heading">Three Skills Your Team Needs</h2>
+
+    <div class="skills">
+      <div class="skill">
+        <div class="skill-name">Articulation</div>
+        <div class="skill-desc">Explain your decisions so the system learns.</div>
+        <div class="skill-example">"I rejected this lead because PE rollups under 18 months always churn."</div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">Evaluation</div>
+        <div class="skill-desc">Judge AI output rather than producing from scratch.</div>
+        <div class="skill-example">Is this recommendation right? What context is the system missing?</div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">Direction-Setting</div>
+        <div class="skill-desc">Spend your time on insight and foresight. The routine is handled.</div>
+        <div class="skill-example">What does this pattern mean? What should we do about it?</div>
+      </div>
+    </div>
+  </div>
+
+  <img src="../../../../assets/From-Figma/eSided-e-only-of-logo.svg" alt="" class="e-badge">
+  <script src="../shared/slide-toolbar.js"></script>
+</body>
+</html>
