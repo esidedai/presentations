@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "WebFetch(domain:www.figma.com)"
+    ]
+  }
+}

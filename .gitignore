@@ -1,0 +1,63 @@
+# Environment Variables - CRITICAL: Contains API keys
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Generated Presentation Outputs (exclude generated files, keep source)
+presentations/*/output/*.pptx
+presentations/*/output/*.png
+presentations/*/output/*.jpg
+presentations/*/output/*.mp4
+
+# Test outputs
+.ai/showcase/test_output/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Keep all markdown documentation
+!README.md
+!*.md
