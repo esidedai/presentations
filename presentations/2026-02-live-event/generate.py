@@ -55,7 +55,7 @@ class AIWorkforcePresentation:
         </mc:AlternateContent>'''
         slide.element.append(etree.fromstring(xml))
 
-    def add_title_slide(self, title, subtitle, note=None):
+    def add_title_slide(self, title, subtitle):
         """Create a title slide"""
         slide = self.prs.slides.add_slide(self.prs.slide_layouts[6])  # Blank layout
 
@@ -89,15 +89,9 @@ class AIWorkforcePresentation:
             subtitle_para.font.color.rgb = self.brand_blue
             subtitle_para.alignment = PP_ALIGN.CENTER
 
-        # Speaker notes
-        if note:
-            notes_slide = slide.notes_slide
-            text_frame = notes_slide.notes_text_frame
-            text_frame.text = note
-
         return slide
 
-    def add_content_slide(self, title, content, image_path=None, note=None, layout="title_content"):
+    def add_content_slide(self, title, content, image_path=None, layout="title_content"):
         """Create a content slide with optional image"""
         slide = self.prs.slides.add_slide(self.prs.slide_layouts[6])  # Blank
 
@@ -161,15 +155,9 @@ class AIWorkforcePresentation:
                     p.level = 1
                     p.alignment = PP_ALIGN.LEFT
 
-        # Speaker notes
-        if note:
-            notes_slide = slide.notes_slide
-            text_frame = notes_slide.notes_text_frame
-            text_frame.text = note
-
         return slide
 
-    def add_image_slide(self, title, image_path, caption=None, note=None):
+    def add_image_slide(self, title, image_path, caption=None):
         """Create a slide with large image"""
         slide = self.prs.slides.add_slide(self.prs.slide_layouts[6])
 
@@ -209,12 +197,6 @@ class AIWorkforcePresentation:
             caption_para.font.size = Pt(28)
             caption_para.font.color.rgb = self.dark_gray
             caption_para.alignment = PP_ALIGN.CENTER
-
-        # Speaker notes
-        if note:
-            notes_slide = slide.notes_slide
-            text_frame = notes_slide.notes_text_frame
-            text_frame.text = note
 
         return slide
 
@@ -486,8 +468,7 @@ graph TD
         print("\n[1/28] Title slide")
         self.add_title_slide(
             "The AI Workforce",
-            "Deploying Institutional Intelligence in Professional Services",
-            note="45 minutes. Set tone: This is about leadership, not technology."
+            "Deploying Institutional Intelligence in Professional Services"
         )
 
         # ACT 1: HISTORICAL CONTEXT
@@ -498,8 +479,7 @@ graph TD
         self.add_image_slide(
             "The Harvest (1800s)",
             historical_images.get('harvest', ''),
-            "95% of Americans worked in agriculture",
-            note="Establish baseline - massive workforce doing manual work. Pause here."
+            "95% of Americans worked in agriculture"
         )
 
         # SLIDE 3: Combine Harvester
@@ -507,8 +487,7 @@ graph TD
         self.add_image_slide(
             "The Combine Harvester Arrives",
             historical_images.get('combine', ''),
-            "One machine eliminated 90% of harvest labor",
-            note="Work eliminated, but workers shifted to new roles. Pattern starts."
+            "One machine eliminated 90% of harvest labor"
         )
 
         # SLIDE 4: Switchboard Operators
@@ -516,8 +495,7 @@ graph TD
         self.add_image_slide(
             "Switchboard Operators (1950s)",
             historical_images.get('switchboard', ''),
-            "Bell System employed 350,000 switchboard operators",
-            note="Knowledge work requiring skill, judgment, memory. Sound familiar?"
+            "Bell System employed 350,000 switchboard operators"
         )
 
         # SLIDE 5: Direct Dial
@@ -525,8 +503,7 @@ graph TD
         self.add_image_slide(
             "Direct Dial Changes Everything",
             historical_images.get('direct_dial', ''),
-            "Automatic switching eliminated 350,000 jobs - Workers moved to new telecommunications roles",
-            note="Pattern repeats. Work eliminated, workers adapted. Transition to present."
+            "Automatic switching eliminated 350,000 jobs - Workers moved to new telecommunications roles"
         )
 
         # ACT 2: THE CURRENT TRAP
@@ -543,8 +520,7 @@ graph TD
                 "• Lead attorney: document review, research memos, status updates",
                 "• Top recruiter: resume screening, scheduling, follow-ups"
             ],
-            illustrations.get('in_office'),
-            note="Expensive talent doing low-value work. Ask: Does this sound familiar?"
+            illustrations.get('in_office')
         )
 
         # SLIDE 7: Million-Dollar Bottleneck
@@ -558,8 +534,7 @@ graph TD
                 "",
                 "Tribal knowledge locked in email, Slack, individual brains"
             ],
-            None,
-            note="This is the real cost - not salary, but lost intelligence. Pause."
+            None
         )
 
         # SLIDE 8: The Tool Trap
@@ -574,8 +549,7 @@ graph TD
                 "• Zero process change",
                 "• Why? Tools require humans to operate them every time"
             ],
-            illustrations.get('creative_woman'),
-            note="You hired people, not tools. Tools don't do work autonomously."
+            illustrations.get('creative_woman')
         )
 
         # SLIDE 9: What If We Reframe?
@@ -587,8 +561,7 @@ graph TD
                 "",
                 "What if it's a worker?"
             ],
-            illustrations.get('in_thought'),
-            note="Transition slide. Let this sit. Provocative reframe."
+            illustrations.get('in_thought')
         )
         self.add_morph_transition(slide9)
 
@@ -609,8 +582,7 @@ graph TD
                 "• Learns institutional knowledge",
                 "• Output: Completed work product"
             ],
-            None,
-            note="This is the conceptual shift. Emphasize autonomy."
+            None
         )
 
         # ACT 3: PROOF - MERIDIAN GROUP
@@ -629,8 +601,7 @@ graph TD
                 "• Knowledge loss when people leave",
                 "• Can't scale without adding headcount"
             ],
-            illustrations.get('team_collaboration'),
-            note="Relatable peer example. Make this feel familiar to audience."
+            illustrations.get('team_collaboration')
         )
 
         # SLIDE 12: 5 AI Workers
@@ -644,8 +615,7 @@ graph TD
                 "4. Talent Hunter - Screens candidates, schedules interviews",
                 "5. Content Co-Pilot - Writes blog posts, social updates"
             ],
-            illustrations.get('team_page'),
-            note="Each one does real, complete work. Not suggestions - deliverables."
+            illustrations.get('team_page')
         )
 
         # SLIDE 13: The Numbers
@@ -653,8 +623,7 @@ graph TD
         self.add_image_slide(
             "The Numbers",
             charts.get('roi', ''),
-            None,
-            note="Conservative numbers. Doesn't include quality improvements. $332K net ROI, 3.7 month payback."
+            None
         )
 
         # SLIDE 14: Invoice Processor Deep Dive
@@ -662,8 +631,7 @@ graph TD
         self.add_image_slide(
             "Invoice Processor - How It Works",
             diagrams.get('workflow', ''),
-            "800 invoices/month • 120 hours saved • 99.4% accuracy",
-            note="Autonomous operation with human oversight. Walk through workflow."
+            "800 invoices/month • 120 hours saved • 99.4% accuracy"
         )
 
         # SLIDE 15: What Really Changed
@@ -679,8 +647,7 @@ graph TD
                 "",
                 "This is institutional capital being preserved"
             ],
-            illustrations.get('our_solution'),
-            note="This is the key insight. Not just efficiency - knowledge preservation."
+            illustrations.get('our_solution')
         )
 
         # SLIDE 16: Three Autonomy Modes
@@ -700,8 +667,7 @@ graph TD
                 "   Drafts work, human edits/sends",
                 "   Example: Blog posts"
             ],
-            None,
-            note="You calibrate based on risk tolerance. Show control."
+            None
         )
 
         # SLIDE 17: What Happened to Humans?
@@ -720,8 +686,7 @@ graph TD
                 "• Marketing manager → strategy",
                 "  (campaigns +25%)"
             ],
-            illustrations.get('startup_life'),
-            note="Workers freed to do work only humans can do. This is the payoff."
+            illustrations.get('startup_life')
         )
 
         # SLIDE 18: Compounding Effect
@@ -729,8 +694,7 @@ graph TD
         self.add_image_slide(
             "The Compounding Effect",
             charts.get('compounding', ''),
-            "Each pattern teaches the AI workers institutional judgment",
-            note="This improves over time, unlike human hires. Emphasize compound nature."
+            "Each pattern teaches the AI workers institutional judgment"
         )
 
         # ACT 4: THE CAPITAL LENS
@@ -748,8 +712,7 @@ graph TD
                 "",
                 "When they leave, you write it off"
             ],
-            illustrations.get('building_blocks'),
-            note="This is about durability, not efficiency. Reframe from expense to asset."
+            illustrations.get('building_blocks')
         )
 
         # SLIDE 20: Capital Lens Framework
@@ -765,8 +728,7 @@ graph TD
                 "",
                 "Both matter, but knowledge compounds forever"
             ],
-            None,
-            note="Traditional ROI vs. institutional capital. Both valuable, different time horizons."
+            None
         )
 
         # SLIDE 21: Scar Tissue Test
@@ -782,8 +744,7 @@ graph TD
                 "",
                 "That's encoded institutional judgment"
             ],
-            illustrations.get('interview'),
-            note="Interactive moment. Ask audience to think of their own examples."
+            illustrations.get('interview')
         )
 
         # SLIDE 22: Examples from Meridian
@@ -802,8 +763,7 @@ graph TD
                 "",
                 "Each one worth $10K-$100K in prevented losses"
             ],
-            None,
-            note="Concrete examples. Make this feel real and relatable."
+            None
         )
 
         # ACT 5: THE DURABILITY QUESTION
@@ -820,8 +780,7 @@ graph TD
                 "",
                 "This thinking mistakes the asset"
             ],
-            illustrations.get('swipe_options'),
-            note="Address the objection directly. Setup for reframe."
+            illustrations.get('swipe_options')
         )
         self.add_morph_transition(slide23)
 
@@ -838,8 +797,7 @@ graph TD
                 "",
                 "Your patterns persist"
             ],
-            illustrations.get('live_collaboration'),
-            note="Separation of concerns. Your institutional knowledge is portable."
+            illustrations.get('live_collaboration')
         )
 
         # SLIDE 25: Like Hiring
@@ -855,8 +813,7 @@ graph TD
                 "",
                 "No retirement, no job changes, no knowledge loss"
             ],
-            illustrations.get('team_spirit'),
-            note="Durability advantage over human-only approach. Emphasize 'forever'."
+            illustrations.get('team_spirit')
         )
 
         # ACT 6: THE CALL
@@ -867,8 +824,7 @@ graph TD
         self.add_image_slide(
             "Two Paths Forward",
             diagrams.get('decision', ''),
-            None,
-            note="This is a strategic choice, not a tactical one. Leadership decision."
+            None
         )
 
         # SLIDE 27: Getting Started
@@ -884,16 +840,14 @@ graph TD
                 "",
                 "4. Repeat until institutional knowledge is preserved (12-18 months)"
             ],
-            illustrations.get('healthy_lifestyle'),
-            note="Systematic, low-risk approach. Make this feel achievable."
+            illustrations.get('healthy_lifestyle')
         )
 
         # SLIDE 28: The Question
         print("[28/28] The Question")
         self.add_title_slide(
             "The harvest was eliminated.\nThe workers weren't.",
-            "",
-            note="Final pause. Then: 'What work will you eliminate? What will your workers do instead?' Open for Q&A."
+            ""
         )
 
         # Add final text to slide 28
