@@ -298,3 +298,80 @@ These are NOT in the asset folders yet. Options:
 - Remove old `02-team.png` and `03-chart.png` from output (pre-existing slides)
 - Final visual QA pass in PowerPoint Presenter View
 - Background swap exploration (one-line change per slide if needed)
+
+---
+
+## 6. CONTENT VERSION DISCREPANCY — Must Rebuild from v3
+
+**Verified 2026-02-14:** The current 28-slide deck was built from `content/outline.md`, NOT from the latest content in `.scratch/Content-Files/`. The v3 content is a significantly different, more polished 35-slide narrative. **The deck needs to be rebuilt from v3.**
+
+### Source Files (v3 — the REAL content)
+
+| File | What It Contains |
+|------|-----------------|
+| `.scratch/Content-Files/slide-content-v3.md` | **35 slides** — full slide-by-slide content with visual descriptions, data, speaker notes |
+| `.scratch/Content-Files/presentation-script-v3.md` | **Full verbatim speaking script** — 25 min speaking + 9-12 min demo + 10 min Q&A = 45 min |
+| `.scratch/Content-Files/demo-narration-v3.md` | **Demo narration** — screen-by-screen walkthrough of live Meridian Group demo (9-12 min) |
+
+### What v3 Changes vs Current 28-Slide Deck
+
+**Event details:** Kehr Technologies, 5360 Legacy Dr, Feb 19, 9:30-11:00am CST, 72 attendees
+
+**Title changed:** "Building Your AI Workforce: What's Actually Working" (v3) vs "The AI Workforce: Deploying Institutional Intelligence" (current)
+
+**Major structural differences (35 slides vs 28):**
+
+| v3 Section | Slides | What's Different |
+|------------|--------|-----------------|
+| **Opening: The Pattern** | 1-5 | Adds **Human Computers** (slide 4) — Katherine Johnson / Hidden Figures, "Computer was a job title." Now 3 historical examples instead of 2 (harvest, switchboard, computers). Slide 5 is a landing/transition. |
+| **NEW: Pre-Qualification** | 7-8 | Two new slides: who this session is for (not a vendor pitch), and "participate well" motif introduction |
+| **NEW: CRM Analogy** | 9-13 | 5 entirely new slides. "You've bought technology before." CRM promise vs reality. Sarah's head vs HubSpot fields (the killer slide). Technology as amplifier. Setup for why AI ≠ tool. |
+| **The Reframe** | 14-20 | Expanded. Adds "What Worker Gets Right" (invoice reconciliation + lead gen examples), "Different Questions" (tool frame vs worker frame), "You Already Know This" (management analogy), "Autonomy as Design" (3 modes contextualized as management, not config). |
+| **NEW: The Shift** | 21-24 | 4 new slides. 7-layer value spectrum (Data→Information→Knowledge→Expertise→Hindsight→Insight→Foresight). "The Gradient Shifts" (boundary moves over time). "Integration Layer" → "Judgment Layer" — your people ARE the glue between systems. |
+| **Demo Transition** | 25 | New bridge slide into live demo. Sets up Meridian as "you're the managing partner." |
+| **NEW: Post-Demo Bridge** | 26-28 | 3 new slides after demo returns. "Three Views of Value" (Financial ROI + Capital View + Calculator). "What the Spreadsheet Misses" (221 patterns compound). "The Scar Tissue Test" (what happens when Tom leaves). |
+| **Close** | 29-35 | Expanded. "Three Questions" pre-adoption checklist. "Three Skills Your Team Needs" (articulation, evaluation, direction-setting). "The Deeper Call" (combine + switchboard + computers callback). "Honesty" slide. Closing motif: "Computer was a job title. Capital C." Q&A slide. |
+
+**Removed from current deck (not in v3):**
+- Slides 11-18 (Meridian Group deep dive) — replaced by LIVE DEMO of the actual Meridian interactive app
+- Slides 19-22 (Capital Lens as separate act) — folded into post-demo bridge
+- Slides 23-25 (Durability Question) — concept absorbed into "The asset isn't the AI model" framing
+
+**Key narrative differences:**
+- v3 uses **"Participate well"** as a recurring motif (not in current deck)
+- v3 uses **"Computer was a job title"** as the closing callback (not in current deck)
+- v3 has a **CRM analogy** that builds the "technology is an amplifier" frame first, THEN pivots to "AI is different" (current deck jumps straight to AI)
+- v3 has a **7-layer value spectrum** (Data→Foresight) that replaces the simpler "institutional knowledge" framing
+- v3 has a **live demo section** (9-12 min) that replaces the static Meridian slides
+- v3 has explicit **"Three Questions"** and **"Three Skills"** prescriptive takeaways
+
+### Rebuild Plan
+
+**Step 1:** Update `content/outline.md` to match v3 (35 slides)
+**Step 2:** Map which existing HTML slides can be reused/adapted vs which need new builds:
+
+| Existing Slide | v3 Fate |
+|---------------|---------|
+| `01-title.html` | **Adapt** — update title text |
+| `02-harvest-1800s.html` | **Adapt** — combine old slides 2+3 into single "Combine Harvester" slide |
+| `03-combine-harvester.html` | **Merge** into slide 2 |
+| `04-switchboard-operators.html` | **Keep** — renumber to slide 3 |
+| `05-direct-dial.html` | **Replace** — becomes "Human Computers" (Katherine Johnson) |
+| `06-todays-reality.html` | **Move** — becomes landing/transition (slide 5) |
+| `07-million-dollar-bottleneck.html` | **Replace** — becomes Pre-Qualification slide |
+| `08-tool-trap.html` | **Replace** — becomes "Participate Well" |
+| `09-what-if-reframe.html` | **Replace** — becomes CRM analogy series (5 new slides) |
+| `10-workers-vs-tools.html` | **Replace** — becomes expanded Reframe series |
+| `11-28` various | **Mostly new builds** — v3 has different structure from slide 14 onward |
+
+**Step 3:** Build new slides in batches of 3, using v3 content + script for speaker notes
+**Step 4:** Re-render all PNGs and reassemble PowerPoint
+**Step 5:** Final QA in Presenter View with `presentation-script-v3.md` as reference
+
+### Speaker Notes Source
+
+For rebuilt deck, speaker notes should come from `presentation-script-v3.md` (the full verbatim script), formatted in WHY/SAY/DELIVER coaching structure. The script has exact suggested dialogue for every slide.
+
+### Demo Integration
+
+v3 includes a 9-12 minute live demo section (slide 25 transitions to demo, slides 26-28 bridge back). The demo narration is in `demo-narration-v3.md`. The demo itself is the Meridian Group interactive app hosted on AIDemoHub.com. No slides needed for the demo section — just the transition slide in and bridge slides out.
