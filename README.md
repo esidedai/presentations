@@ -21,29 +21,47 @@ A complete system for generating `.pptx` presentations with:
 
 ## 🚀 Quick Start
 
-### 1. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
+### For NEW SESSIONS (START HERE)
+**Claude Code auto-loads `MEMORY.md` - read these docs to understand the full context:**
 
-### 2. Set Up API Keys
-Create a `.env` file (already exists, update with your keys):
-```bash
-IDEOGRAM_API_KEY=your_key_here
-PEXELS_API_KEY=your_key_here
-UNSPLASH_ACCESS_KEY=your_key_here
-```
+1. **MEMORY.md** (auto-loaded) - Core principles, brand requirements, rules
+2. **ASSET-WORKFLOW.md** - Complete guide: Figma sync, DrawKit, CDNs, APIs
+3. **presentations/2026-02-live-event/showcase_v2_improved.py** - Latest patterns
+4. **RETROSPECTIVE.md** - V1 mistakes and lessons learned
 
-### 3. Generate the Showcase
+### For GENERATING Presentations
+
+#### Latest Improved Showcase (V2 with eSided Branding)
+```bash
+cd presentations/2026-02-live-event
+python showcase_v2_improved.py
+```
+**Output**: `output/V2_Showcase_Improved.pptx` - 7-slide demo with eSided logo, website info, curved shapes
+
+#### Original Capabilities Showcase
 ```bash
 cd .ai/showcase
 python showcase_presentation.py
 ```
+**Output**: `output/capabilities-showcase.pptx` - 8-slide API demo
 
-**Output**: `output/capabilities-showcase.pptx` - An 8-slide presentation demonstrating all capabilities.
+### For SETUP
 
-### 4. Open in PowerPoint
-Open the `.pptx` file and run the slideshow to see morph transitions in action!
+#### 1. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+#### 2. Set Up API Keys (`.env` file)
+```bash
+IDEOGRAM_API_KEY=your_key_here
+PEXELS_API_KEY=your_key_here
+UNSPLASH_ACCESS_KEY=your_key_here
+
+# Optional: For Figma asset sync
+FIGMA_ACCESS_TOKEN=figd_xxxxxxxxxxxxx
+FIGMA_FILE_KEY=aBcDeFgHiJkLmNoPqRsTuVwXyZ
+```
 
 ---
 
@@ -71,6 +89,43 @@ Presentations/
 ├── requirements.txt
 └── README.md                           # This file
 ```
+
+---
+
+## ✅ eSided Brand Requirements (CRITICAL)
+
+**Every slide MUST include these elements:**
+
+1. **eSided logo** at top (0.6", 0.35" from top-left, 1.5" width)
+   - Located in: `presentations/*/assets-local/eSided-Logo.png`
+
+2. **Website info** at bottom right (12pt Inter)
+   - Text: "www.eSided.com | info@esided.com"
+
+3. **Curved decorative shapes** (partial ovals at edges):
+   - **Top**: Blue oval (-1", -0.5", 4"x2")
+   - **Left**: Purple oval (-1", 3", 2"x4")
+   - **Bottom**: Blue oval (13", 7.5", 4"x3")
+
+4. **White backgrounds ONLY** - Never use gray backgrounds
+
+5. **Brand colors**:
+   ```css
+   Primary Blue:    #0078d4
+   Accent Purple:   #8764b8
+   Dark Gray:       #323130
+   White:           #ffffff
+   Success Green:   #107c10
+   ```
+
+6. **Chart readability** (NO overlapping text):
+   - Data labels: **28pt minimum**, bold
+   - Axis labels: **20-22pt minimum**
+   - Title: **32pt minimum**
+   - Chart size: **1600x800 minimum**
+   - Padding: Generous (top: 40, sides: 20)
+
+See `showcase_v2_improved.py` for implementation example.
 
 ---
 
@@ -135,14 +190,29 @@ Presentations/
 
 ## 📖 Documentation
 
-### For Users
-- **[Skill Definition](.ai/skills/presentation-generator.md)** - How to use the skill with Claude Code
-- **[Showcase Documentation](.ai/showcase/SHOWCASE.md)** - Complete capabilities reference
+### Essential (Read First)
+- **[MEMORY.md](MEMORY.md)** - Core principles, brand requirements, typography (auto-loaded in sessions)
+- **[ASSET-WORKFLOW.md](ASSET-WORKFLOW.md)** - **NEW!** Complete guide to acquiring and managing assets
+  - Figma sync workflow (automated download)
+  - DrawKit assets (SVG/PNG/GIF illustrations)
+  - CDN resources (Font Awesome, Bootstrap Icons, Google Fonts, Remix Icons)
+  - API-based generation (Ideogram, QuickChart, Mermaid, Unsplash, Pexels, DiceBear)
+  - Directory organization and naming conventions
+  - Showcase examples and patterns
 
-### For Developers
-- **[PowerPoint Guide](.ai/reference/Programmatic%20Animated%20PowerPoint%20Guide.md)** - python-pptx deep dive
-- **[CDN Arsenal](.ai/reference/CDN-ARSENAL-KB.md)** - Web assets and libraries reference
+### Learning & Iteration
+- **[RETROSPECTIVE.md](RETROSPECTIVE.md)** - V1 mistakes and what we learned
+- **[NEXT-ITERATION.md](NEXT-ITERATION.md)** - V2 improvement plan with code examples
+- **[presentations/2026-02-live-event/showcase_v2_improved.py](presentations/2026-02-live-event/showcase_v2_improved.py)** - Latest best practices
+
+### API & Capabilities
+- **[Showcase Documentation](.ai/showcase/SHOWCASE.md)** - Complete API capabilities reference
 - **[API Utils Source](.ai/showcase/api_utils.py)** - API integration code
+
+### Advanced References
+- **[PowerPoint Guide](.ai/reference/Programmatic%20Animated%20PowerPoint%20Guide.md)** - python-pptx deep dive
+- **[CDN Arsenal](.ai/reference/CDN-ARSENAL-KB.md)** - Complete CDN library reference
+- **[Skill Definition](.ai/skills/presentation-generator.md)** - Claude Code skill usage
 
 ---
 
