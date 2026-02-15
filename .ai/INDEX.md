@@ -17,6 +17,7 @@
 | Speaker notes / script | `.scratch/Content-Files/presentation-script-v3.md` |
 | Understanding "how we got here" | `WAYFORWARD.md` (session logs, rebuild plan) |
 | Proven patterns | `RETROSPECTIVE.md` (validated workflow, design principles) |
+| Adding reveal.js presentation mode | `plans/reveal-js-presentation-surface.md` |
 
 ## File Inventory
 
@@ -26,6 +27,12 @@
 |------|---------|--------------|
 | `QUICK-REF.md` | File paths, brand, export commands, slide count | Every session |
 | `PITFALLS.md` | Scar tissue, solved issues | Before any changes |
+
+### Planned Work (`plans/`)
+
+| File | What | Status |
+|------|------|--------|
+| `reveal-js-presentation-surface.md` | Add reveal.js live presentation mode | Planned |
 
 ### Project Root Files
 
